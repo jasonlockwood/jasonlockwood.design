@@ -64,7 +64,13 @@ const Menu = () => (
           <span class="line"></span>
           <span class="line"></span>
           <span class="line"></span>
-      </div> 
+      </div>
+
+      <div className="toggled-page-links">
+        <Link href='/about'><a>About</a></Link>
+        <Link href='/about'><a>Case Studies</a></Link>
+        <Link href='/about'><a>Articles</a></Link>
+      </div>
   </Wrapper>
 )
 

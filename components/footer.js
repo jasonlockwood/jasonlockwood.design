@@ -3,7 +3,7 @@ import styled, { ThemeProvider } from 'styled-components'
 
 
 const Wrapper = styled.footer`
-  position: absolute;
+  position: fixed;
   bottom:0;
   padding: 16px;
   display: flex;

@@ -1,11 +1,16 @@
 import Head from 'next/head'
 import styles from './layout.module.css'
+import styled, { ThemeProvider } from 'styled-components'
 import Link from 'next/link'
 import Header from '../components/header'
 import Footer from '../components/footer'
 
 const name = 'Jason Lockwood'
 export const siteTitle = 'Jason Lockwood'
+
+const Main = styled.main`
+  margin-top: 92px;
+`
 
 export default function Layout({ children, home }) {
   return (
@@ -31,7 +36,7 @@ export default function Layout({ children, home }) {
 
       <Header />
 
-      <main>{children}</main>
+      <Main>{children}</Main>
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">
