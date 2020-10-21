@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { useRouter } from "next/router";
 import styled, { ThemeProvider } from 'styled-components'
 
 
@@ -6,30 +7,41 @@ const Wrapper = styled.header`
   display: flex;
   flex-direction:column;
   position:fixed;
-  width:-webkit-fill-available;
+  width:100%;
   background:rgba(255, 255, 255, 0.35);
 
   aside{
-    padding:16px;
+    margin:16px;
     z-index:1;
   }
   .name{
     color: #333941;
     font-weight: 700;
-    margin:0;
+    padding:0;
   }
 
   a {
-    margin: 0 16px;
+    padding: 8px 16px;
     color: #7B7E83;
     font-weight: 500;
+    transition: .2s ease-in-out;
+    text-decoration:none;
   }
+
+  a:hover{
+    color:#333941;
+  }
+
+  a.active{
+      color:#EBECEB;
+      cursor: default;
+    }
 `
 
 
 
 const MenuBarWrapper = styled.div`
-padding: 16px;
+margin: 16px;
 display:flex;
 justify-content: space-between;
 
@@ -39,14 +51,14 @@ justify-content: space-between;
   }
 
 .icon{
-    margin-top: 3px;
+    margin-top: 9px;
   }
   .icon .line{
-  width: 24px;
-  height: 2px;
+  width: 16px;
+  height: 1px;
   background-color: #474C54;
   display: block;
-  margin: 4px auto;
+  margin: 7px auto;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -56,26 +68,21 @@ justify-content: space-between;
   cursor: pointer;
 }
 
-.icon.is-active .line:nth-child(2){
-  opacity: 0;
-}
 
 .icon.is-active .line:nth-child(1){
-  -webkit-transform: translateY(6px) rotate(45deg);
-  -ms-transform: translateY(6px) rotate(45deg);
-  -o-transform: translateY(6px) rotate(45deg);
-  transform: translateY(6px) rotate(45deg);
+  -webkit-transform: translateY(4px) rotate(45deg);
+  -ms-transform: translateY(4px) rotate(45deg);
+  -o-transform: translateY(4px) rotate(45deg);
+  transform: translateY(4px) rotate(45deg);
 }
 
-.icon.is-active .line:nth-child(3){
-  -webkit-transform: translateY(-6px) rotate(-45deg);
-  -ms-transform: translateY(-6px) rotate(-45deg);
-  -o-transform: translateY(-6px) rotate(-45deg);
-  transform: translateY(-6px) rotate(-45deg);
+.icon.is-active .line:nth-child(2){
+  -webkit-transform: translateY(-4px) rotate(-45deg);
+  -ms-transform: translateY(-4px) rotate(-45deg);
+  -o-transform: translateY(-4px) rotate(-45deg);
+  transform: translateY(-4px) rotate(-45deg);
 }
 `
-
-
 
 const MenuWrapper = styled.div`
   
@@ -92,9 +99,14 @@ const MenuContentWrapper = styled.div`
   display:flex;
   flex-direction:column;
   align-items:flex-end;
-`
+`  
 
-const Header = () => (
+const Header = () => {
+
+  const router = useRouter();
+
+  return(
+
   <Wrapper>
     <MenuBarWrapper>
     <aside>
@@ -103,13 +115,12 @@ const Header = () => (
 
     <aside>
     <div className="page-links">
-      <Link href='/about'><a>About</a></Link>
-      <Link href='/about'><a>Case Studies</a></Link>
-      <Link href='/about'><a>Articles</a></Link>
+      <Link href='/about'><a className={router.pathname == "/about" ? "active" : ""}>About</a></Link>
+      <Link href='/about'><a className={router.pathname == "/casestudies" ? "active" : ""}>Case Studies</a></Link>
+      <Link href='/about'><a className={router.pathname == "/articles" ? "active" : ""}>Articles</a></Link>
     </div>
     
       <div className="icon">
-          <span class="line"></span>
           <span class="line"></span>
           <span class="line"></span>
       </div>
@@ -118,13 +129,21 @@ const Header = () => (
 
     <MenuWrapper className="toggled-page-links">
       <MenuContentWrapper>
-        <Link href='/about'><a>About</a></Link>
-        <Link href='/about'><a>Case Studies</a></Link>
-        <Link href='/about'><a>Articles</a></Link>
+        <Link href='/about'><a className={router.pathname == "/about" ? "active" : ""}>About</a></Link>
+        <Link href='/about'><a className={router.pathname == "/casestudies" ? "active" : ""}>Case Studies</a></Link>
+        <Link href='/about'><a className={router.pathname == "/articles" ? "active" : ""}>Articles</a></Link>
       </MenuContentWrapper>
     </MenuWrapper>
 
   </Wrapper>
-)
+  )
+}
 
-export default Header
+
+function displayNav() {
+  // alert('Hello!');
+  
+}
+
+
+export default Header 
