@@ -1,11 +1,16 @@
 import Head from 'next/head'
 import styles from './layout.module.css'
+import styled, { ThemeProvider } from 'styled-components'
 import Link from 'next/link'
-import Header from '../components/header'
-import Footer from '../components/footer'
+import Navbar from './navbar'
+import Footer from './footer'
 
 const name = 'Jason Lockwood'
 export const siteTitle = 'Jason Lockwood'
+
+const Main = styled.main`
+  margin-top: 92px;
+`
 
 export default function Layout({ children, home }) {
   return (
@@ -25,13 +30,11 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
 
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
-
       </Head>
 
-      <Header />
+      <Navbar />
 
-      <main>{children}</main>
+      <Main>{children}</Main>
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">
