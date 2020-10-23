@@ -24,6 +24,7 @@ export const breakpoint = {
 
 // =====  END Responsive Presets   ==========
 
+
 const Navbar = styled.nav`
   display: flex;
   flex-direction:column;
@@ -99,14 +100,14 @@ justify-content: space-between;
 }
 
 
-.icon.is-active .line:nth-child(1){
+.icon.toggled .line:nth-child(1){
   -webkit-transform: translateY(4px) rotate(45deg);
   -ms-transform: translateY(4px) rotate(45deg);
   -o-transform: translateY(4px) rotate(45deg);
   transform: translateY(4px) rotate(45deg);
 }
 
-.icon.is-active .line:nth-child(2){
+.icon.toggled .line:nth-child(2){
   -webkit-transform: translateY(-4px) rotate(-45deg);
   -ms-transform: translateY(-4px) rotate(-45deg);
   -o-transform: translateY(-4px) rotate(-45deg);
@@ -132,6 +133,48 @@ const Menu = styled.div`
   align-items:flex-end;
 `  
 
+class NavToggle extends React.Component {
+  constructor(props) {    
+    super(props)
+    this.state = {
+      condition: false
+    }
+    this.handleClick = this.handleClick.bind(this)
+  }
+  handleClick() {
+    this.setState({
+      condition: !this.state.condition
+    })
+  }
+  render() {
+
+    let MenuWrapper = (this.state.condition ? ' active': '');
+
+    return (
+      <NavToggleChild        
+        className={ this.state.condition ? "icon toggled" : "icon" }
+        toggleClassName={ this.handleClick }
+      >
+        <span class="line"></span>
+          <span class="line"></span>
+      </NavToggleChild>
+    )
+  }
+}
+
+class NavToggleChild extends React.Component {
+  render() {
+    return (
+      <div
+        className={ this.props.className }
+        onClick={ this.props.toggleClassName }
+      >
+        { this.props.children }
+      </div>
+    )    
+  }
+}
+
 const Header = () => {
 
   const router = useRouter();
@@ -151,10 +194,9 @@ const Header = () => {
       <Link href='/about'><a className={router.pathname == "/articles" ? "active" : ""}>Articles</a></Link>
     </div>
     
-      <div className="icon">
-          <span class="line"></span>
-          <span class="line"></span>
-      </div>
+      <NavToggle className="icon">
+          
+      </NavToggle>
     </aside>
     </Nav>
 
