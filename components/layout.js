@@ -2,8 +2,8 @@ import Head from 'next/head'
 import styles from './layout.module.css'
 import styled, { ThemeProvider } from 'styled-components'
 import Link from 'next/link'
-import Header from '../components/header'
-import Footer from '../components/footer'
+import Navbar from './navbar'
+import Footer from './footer'
 
 const name = 'Jason Lockwood'
 export const siteTitle = 'Jason Lockwood'
@@ -34,7 +34,7 @@ export default function Layout({ children, home }) {
 
       </Head>
 
-      <Header />
+      <Navbar />
 
       <Main>{children}</Main>
       {!home && (

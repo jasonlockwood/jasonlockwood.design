@@ -3,7 +3,32 @@ import { useRouter } from "next/router";
 import styled, { ThemeProvider } from 'styled-components'
 
 
-const Wrapper = styled.header`
+
+// =====  BEGIN Responsive Presets   ==========
+
+const size = {
+  xxs: "320px",
+  xs: "375px",
+  sm: "425px",
+  md: "768px",
+  lg: "1024px",
+  xl: "1440px",
+  xxl: "2560px"
+};
+
+export const breakpoint = {
+  xxs: `(min-width: ${size.xxs})`,
+  xs: `(min-width: ${size.xs})`,
+  sm: `(min-width: ${size.sm})`,
+  md: `(min-width: ${size.md})`,
+  lg: `(min-width: ${size.lg})`,
+  xl: `(min-width: ${size.xl})`,
+  xxl: `(min-width: ${size.xxl})`
+};
+
+// =====  END Responsive Presets   ==========
+
+const Navbar = styled.nav`
   display: flex;
   flex-direction:column;
   position:fixed;
@@ -21,7 +46,7 @@ const Wrapper = styled.header`
   }
 
   a {
-    padding: 8px 16px;
+    padding: 0 16px;
     color: #7B7E83;
     font-weight: 500;
     transition: .2s ease-in-out;
@@ -40,7 +65,7 @@ const Wrapper = styled.header`
 
 
 
-const MenuBarWrapper = styled.div`
+const Nav = styled.div`
 margin: 16px;
 display:flex;
 justify-content: space-between;
@@ -48,10 +73,19 @@ justify-content: space-between;
 
 .page-links{
     display:none;
+    margin: 0 -16px;
+
+    @media ${breakpoint.md} {
+    display:flex;
+    }
   }
 
 .icon{
     margin-top: 9px;
+
+    @media ${breakpoint.md} {
+      display:none;
+    }
   }
   .icon .line{
   width: 16px;
@@ -93,9 +127,10 @@ const MenuWrapper = styled.div`
   position:fixed;
   width:-webkit-fill-available;
   padding-top:92px;
+  display:none;
 `
 
-const MenuContentWrapper = styled.div`
+const Menu = styled.div`
   display:flex;
   flex-direction:column;
   align-items:flex-end;
@@ -107,8 +142,8 @@ const Header = () => {
 
   return(
 
-  <Wrapper>
-    <MenuBarWrapper>
+  <Navbar>
+    <Nav>
     <aside>
       <Link href='/'><a className="name">Jason Lockwood</a></Link>
     </aside>
@@ -125,17 +160,17 @@ const Header = () => {
           <span class="line"></span>
       </div>
     </aside>
-    </MenuBarWrapper>
+    </Nav>
 
     <MenuWrapper className="toggled-page-links">
-      <MenuContentWrapper>
+      <Menu>
         <Link href='/about'><a className={router.pathname == "/about" ? "active" : ""}>About</a></Link>
         <Link href='/about'><a className={router.pathname == "/casestudies" ? "active" : ""}>Case Studies</a></Link>
         <Link href='/about'><a className={router.pathname == "/articles" ? "active" : ""}>Articles</a></Link>
-      </MenuContentWrapper>
+      </Menu>
     </MenuWrapper>
 
-  </Wrapper>
+  </Navbar>
   )
 }
 
