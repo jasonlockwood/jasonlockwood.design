@@ -1,10 +1,13 @@
 import Link from 'next/link'
 import { useRouter } from "next/router";
+import React, { useState } from "react";
 import styled, { ThemeProvider } from 'styled-components'
 
 
 
-// =====  BEGIN Responsive Presets   ==========
+// ====================  BEGIN Responsive Presets  ====================
+
+
 
 const size = {
   xs: "0px",
@@ -22,7 +25,9 @@ export const breakpoint = {
   xl: `(min-width: ${size.xl})`,
 };
 
-// =====  END Responsive Presets   ==========
+
+
+// ====================  END Responsive Presets  ====================
 
 
 const Navbar = styled.nav`
@@ -100,14 +105,14 @@ justify-content: space-between;
 }
 
 
-.icon.toggled .line:nth-child(1){
+.icon.is-active .line:nth-child(1){
   -webkit-transform: translateY(4px) rotate(45deg);
   -ms-transform: translateY(4px) rotate(45deg);
   -o-transform: translateY(4px) rotate(45deg);
   transform: translateY(4px) rotate(45deg);
 }
 
-.icon.toggled .line:nth-child(2){
+.icon.is-active .line:nth-child(2){
   -webkit-transform: translateY(-4px) rotate(-45deg);
   -ms-transform: translateY(-4px) rotate(-45deg);
   -o-transform: translateY(-4px) rotate(-45deg);
@@ -115,108 +120,92 @@ justify-content: space-between;
 }
 `
 
-const MenuWrapper = styled.div`
-  
-  background:rgba(255, 255, 255, 0.75);
-  box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 0px;
-  backdrop-filter: saturate(180%) blur(20px);
-  padding:16px;
-  position:fixed;
-  width:-webkit-fill-available;
-  padding-top:92px;
-  display:none;
-`
+// const MenuWrapper = styled.div`
 
-const Menu = styled.div`
-  display:flex;
-  flex-direction:column;
-  align-items:flex-end;
-`  
+//   background:rgba(255, 255, 255, 0.75);
+//   box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 0px;
+//   backdrop-filter: saturate(180%) blur(20px);
+//   padding:16px;
+//   position:fixed;
+//   width:-webkit-fill-available;
+//   padding-top:92px;
+//   display:none;
+// `
 
-class NavToggle extends React.Component {
-  constructor(props) {    
-    super(props)
-    this.state = {
-      condition: false
-    }
-    this.handleClick = this.handleClick.bind(this)
-  }
-  handleClick() {
-    this.setState({
-      condition: !this.state.condition
-    })
-  }
-  render() {
+// const Menu = styled.div`
+//   display:flex;
+//   flex-direction:column;
+//   align-items:flex-end;
+// `
 
-    let MenuWrapper = (this.state.condition ? ' active': '');
 
-    return (
-      <NavToggleChild        
-        className={ this.state.condition ? "icon toggled" : "icon" }
-        toggleClassName={ this.handleClick }
-      >
-        <span class="line"></span>
-          <span class="line"></span>
-      </NavToggleChild>
-    )
-  }
+// ====================  BEGIN NavToggle Component  ====================
+
+
+const NavToggle = () => {
+
+  const [isActive, setActive] = useState("false");
+
+  const handleToggle = () => {
+    setActive(!isActive);
+  };
+
+  return (
+
+    <div onClick={handleToggle} className={`icon ${isActive ? "" : "is-active"}`}>
+      <span class="line"></span>
+      <span class="line"></span>
+    </div>
+
+  );
 }
 
-class NavToggleChild extends React.Component {
-  render() {
-    return (
-      <div
-        className={ this.props.className }
-        onClick={ this.props.toggleClassName }
-      >
-        { this.props.children }
-      </div>
-    )    
-  }
-}
 
-const Header = () => {
+// ====================  END NavToggle Component  ====================
+
+
+
+// ====================  BEGIN NavMenu Component  ====================
+
+
+const NavMenu = () => {
 
   const router = useRouter();
 
-  return(
+  return (
 
-  <Navbar>
-    <Nav>
-    <aside>
-      <Link href='/'><a className="name">Jason Lockwood</a></Link>
-    </aside>
-
-    <aside>
     <div className="page-links">
       <Link href='/about'><a className={router.pathname == "/about" ? "active" : ""}>About</a></Link>
       <Link href='/about'><a className={router.pathname == "/casestudies" ? "active" : ""}>Case Studies</a></Link>
       <Link href='/about'><a className={router.pathname == "/articles" ? "active" : ""}>Articles</a></Link>
     </div>
-    
-      <NavToggle className="icon">
-          
-      </NavToggle>
-    </aside>
-    </Nav>
 
-    <MenuWrapper className="toggled-page-links">
-      <Menu>
-        <Link href='/about'><a className={router.pathname == "/about" ? "active" : ""}>About</a></Link>
-        <Link href='/about'><a className={router.pathname == "/casestudies" ? "active" : ""}>Case Studies</a></Link>
-        <Link href='/about'><a className={router.pathname == "/articles" ? "active" : ""}>Articles</a></Link>
-      </Menu>
-    </MenuWrapper>
-
-  </Navbar>
   )
 }
 
 
-function displayNav() {
-  // alert('Hello!');
-  
+// ====================  BEGIN Header Component  ====================
+
+
+const Header = () => {
+
+  return (
+
+    <Navbar>
+      <Nav>
+        <Link href='/'><a className="name">Jason Lockwood</a></Link>
+
+        <NavToggle />
+
+        <NavMenu />
+
+      </Nav>
+    </Navbar>
+  )
 }
+
+
+// ====================  BEGIN Header Component  ====================
 
 
 export default Header 
