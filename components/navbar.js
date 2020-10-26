@@ -32,19 +32,20 @@ export const breakpoint = {
 
 const Navbar = styled.nav`
   display: flex;
-  flex-direction:column;
-  position:fixed;
-  width:100%;
-  background:rgba(255, 255, 255, 0.35);
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.35);
 
   aside{
-    margin:16px;
-    z-index:1;
+    margin: 16px;
+    z-index: 1;
   }
   .name{
     color: #333941;
     font-weight: 700;
-    padding:0;
+    padding: 0;
+    margin: 16px
   }
 
   a {
@@ -52,15 +53,15 @@ const Navbar = styled.nav`
     color: #7B7E83;
     font-weight: 500;
     transition: .2s ease-in-out;
-    text-decoration:none;
+    text-decoration: none;
   }
 
   a:hover{
-    color:#333941;
+    color: #333941;
   }
 
   a.active{
-      color:#EBECEB;
+      color: #EBECEB;
       cursor: default;
     }
 `
@@ -69,39 +70,45 @@ const Navbar = styled.nav`
 
 const Nav = styled.div`
 margin: 16px;
-display:flex;
+display: flex;
 justify-content: space-between;
 
 
 .page-links{
-    display:none;
-    margin: 0 -16px;
+    display: none;
+    margin: 16px 0;
     
     @media ${breakpoint.sm} {
-    display:flex;
+    display: flex;
     }
   }
 
 .icon{
-    margin-top: 9px;
+    width: 24px;
+    height: 24px;
+    margin: 8px;
+    padding: 8px;
+    border-radius: 50%;
 
     @media ${breakpoint.sm} {
-      display:none;
+      display: none;
     }
   }
   .icon .line{
-  width: 16px;
-  height: 1px;
-  background-color: #474C54;
-  display: block;
-  margin: 7px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+    width: 16px;
+    height: 1px;
+    background-color: #474C54;
+    display: block;
+    margin: 7px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
 
   .icon:hover{
-  cursor: pointer;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    background: rgba(235,236,235,0.5);
 }
 
 
