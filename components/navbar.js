@@ -34,13 +34,10 @@ const Navbar = styled.nav`
   display: flex;
   flex-direction: column;
   position: fixed;
+  flex-wrap: wrap;
   width: 100%;
-  background: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 1);
 
-  aside{
-    margin: 16px;
-    z-index: 1;
-  }
   .name{
     color: #333941;
     font-weight: 700;
@@ -68,20 +65,33 @@ const Navbar = styled.nav`
 
 
 
-const Nav = styled.div`
+const StyledNav = styled.div`
 margin: 16px;
-display: flex;
-justify-content: space-between;
 
 
 .page-links{
     display: none;
     margin: 16px 0;
+    flex-direction: row;
     
     @media ${breakpoint.sm} {
     display: flex;
     }
   }
+
+  .page-links.is-active{
+      display: flex;
+      flex-direction: column;
+      flex-basis:100%;
+
+      @media ${breakpoint.sm} {
+      flex-basis: unset;
+      flex-direction : row;
+    }
+      
+    }
+
+    
 
 .icon{
     width: 24px;
@@ -146,10 +156,10 @@ justify-content: space-between;
 // `
 
 
-// ====================  BEGIN NavToggle Component  ====================
+// ====================  BEGIN Nav Component  ====================
 
 
-const NavToggle = () => {
+const Nav = () => {
 
   const [isActive, setActive] = useState("false");
 
@@ -157,13 +167,30 @@ const NavToggle = () => {
     setActive(!isActive);
   };
 
+  const openNav = () => {
+    setActive(!isActive);
+    handleToggle();
+  };
+
+  const router = useRouter();
+
   return (
+    <StyledNav>
+      <div>
+        <Link href='/'><a className="name">Jason Lockwood</a></Link>
 
-    <div onClick={handleToggle} className={`icon ${isActive ? "" : "is-active"}`}>
-      <span class="line"></span>
-      <span class="line"></span>
-    </div>
+        <div onClick={openNav} className={`icon ${isActive ? "" : "is-active"}`}>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </div>
 
+      <div className={`page-links ${isActive ? "" : "is-active"}`}>
+        <Link href='/about'><a className={router.pathname == "/about" ? "active" : ""}>About</a></Link>
+        <Link href='/about'><a className={router.pathname == "/casestudies" ? "active" : ""}>Case Studies</a></Link>
+        <Link href='/about'><a className={router.pathname == "/articles" ? "active" : ""}>Articles</a></Link>
+      </div>
+    </StyledNav>
   );
 }
 
@@ -175,20 +202,6 @@ const NavToggle = () => {
 // ====================  BEGIN NavMenu Component  ====================
 
 
-const NavMenu = () => {
-
-  const router = useRouter();
-
-  return (
-
-    <div className="page-links">
-      <Link href='/about'><a className={router.pathname == "/about" ? "active" : ""}>About</a></Link>
-      <Link href='/about'><a className={router.pathname == "/casestudies" ? "active" : ""}>Case Studies</a></Link>
-      <Link href='/about'><a className={router.pathname == "/articles" ? "active" : ""}>Articles</a></Link>
-    </div>
-
-  )
-}
 
 
 // ====================  BEGIN Header Component  ====================
@@ -199,14 +212,7 @@ const Header = () => {
   return (
 
     <Navbar>
-      <Nav>
-        <Link href='/'><a className="name">Jason Lockwood</a></Link>
-
-        <NavToggle />
-
-        <NavMenu />
-
-      </Nav>
+      <Nav/>
     </Navbar>
   )
 }
