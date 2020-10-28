@@ -67,6 +67,10 @@ const Navbar = styled.nav`
 
 const StyledNav = styled.div`
 margin: 16px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
 
 
 .page-links{
@@ -176,14 +180,12 @@ const Nav = () => {
 
   return (
     <StyledNav>
-      <div>
         <Link href='/'><a className="name">Jason Lockwood</a></Link>
 
         <div onClick={openNav} className={`icon ${isActive ? "" : "is-active"}`}>
           <span class="line"></span>
           <span class="line"></span>
         </div>
-      </div>
 
       <div className={`page-links ${isActive ? "" : "is-active"}`}>
         <Link href='/about'><a className={router.pathname == "/about" ? "active" : ""}>About</a></Link>
