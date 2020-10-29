@@ -1,10 +1,13 @@
 import Link from 'next/link'
 import { useRouter } from "next/router";
+import React, { useState } from "react";
 import styled, { ThemeProvider } from 'styled-components'
 
 
 
-// =====  BEGIN Responsive Presets   ==========
+// ====================  BEGIN Responsive Presets  ====================
+
+
 
 const size = {
   xs: "0px",
@@ -22,24 +25,24 @@ export const breakpoint = {
   xl: `(min-width: ${size.xl})`,
 };
 
-// =====  END Responsive Presets   ==========
+
+
+// ====================  END Responsive Presets  ====================
 
 
 const Navbar = styled.nav`
   display: flex;
-  flex-direction:column;
-  position:fixed;
-  width:100%;
-  background:rgba(255, 255, 255, 0.35);
+  flex-direction: column;
+  position: fixed;
+  flex-wrap: wrap;
+  width: 100%;
+  background: rgba(255, 255, 255, 1);
 
-  aside{
-    margin:16px;
-    z-index:1;
-  }
   .name{
     color: #333941;
     font-weight: 700;
-    padding:0;
+    padding: 0;
+    margin: 16px
   }
 
   a {
@@ -47,67 +50,90 @@ const Navbar = styled.nav`
     color: #7B7E83;
     font-weight: 500;
     transition: .2s ease-in-out;
-    text-decoration:none;
+    text-decoration: none;
   }
 
   a:hover{
-    color:#333941;
+    color: #333941;
   }
 
   a.active{
-      color:#EBECEB;
+      color: #EBECEB;
       cursor: default;
     }
 `
 
 
 
-const Nav = styled.div`
+const StyledNav = styled.div`
 margin: 16px;
-display:flex;
+display: flex;
 justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
 
 
 .page-links{
-    display:none;
-    margin: 0 -16px;
+    display: none;
+    margin: 16px 0;
+    flex-direction: row;
     
     @media ${breakpoint.sm} {
-    display:flex;
+    display: flex;
     }
   }
 
+  .page-links.is-active{
+      display: flex;
+      flex-direction: column;
+      flex-basis:100%;
+
+      @media ${breakpoint.sm} {
+      flex-basis: unset;
+      flex-direction : row;
+    }
+      
+    }
+
+    
+
 .icon{
-    margin-top: 9px;
+    width: 24px;
+    height: 24px;
+    margin: 8px;
+    padding: 8px;
+    border-radius: 50%;
 
     @media ${breakpoint.sm} {
-      display:none;
+      display: none;
     }
   }
   .icon .line{
-  width: 16px;
-  height: 1px;
-  background-color: #474C54;
-  display: block;
-  margin: 7px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+    width: 16px;
+    height: 1px;
+    background-color: #474C54;
+    display: block;
+    margin: 7px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
 
   .icon:hover{
-  cursor: pointer;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    background: rgba(235,236,235,0.5);
 }
 
 
-.icon.toggled .line:nth-child(1){
+.icon.is-active .line:nth-child(1){
   -webkit-transform: translateY(4px) rotate(45deg);
   -ms-transform: translateY(4px) rotate(45deg);
   -o-transform: translateY(4px) rotate(45deg);
   transform: translateY(4px) rotate(45deg);
 }
 
-.icon.toggled .line:nth-child(2){
+.icon.is-active .line:nth-child(2){
   -webkit-transform: translateY(-4px) rotate(-45deg);
   -ms-transform: translateY(-4px) rotate(-45deg);
   -o-transform: translateY(-4px) rotate(-45deg);
@@ -115,108 +141,86 @@ justify-content: space-between;
 }
 `
 
-const MenuWrapper = styled.div`
-  
-  background:rgba(255, 255, 255, 0.75);
-  box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 0px;
-  backdrop-filter: saturate(180%) blur(20px);
-  padding:16px;
-  position:fixed;
-  width:-webkit-fill-available;
-  padding-top:92px;
-  display:none;
-`
+// const MenuWrapper = styled.div`
 
-const Menu = styled.div`
-  display:flex;
-  flex-direction:column;
-  align-items:flex-end;
-`  
+//   background:rgba(255, 255, 255, 0.75);
+//   box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 0px;
+//   backdrop-filter: saturate(180%) blur(20px);
+//   padding:16px;
+//   position:fixed;
+//   width:-webkit-fill-available;
+//   padding-top:92px;
+//   display:none;
+// `
 
-class NavToggle extends React.Component {
-  constructor(props) {    
-    super(props)
-    this.state = {
-      condition: false
-    }
-    this.handleClick = this.handleClick.bind(this)
-  }
-  handleClick() {
-    this.setState({
-      condition: !this.state.condition
-    })
-  }
-  render() {
+// const Menu = styled.div`
+//   display:flex;
+//   flex-direction:column;
+//   align-items:flex-end;
+// `
 
-    let MenuWrapper = (this.state.condition ? ' active': '');
 
-    return (
-      <NavToggleChild        
-        className={ this.state.condition ? "icon toggled" : "icon" }
-        toggleClassName={ this.handleClick }
-      >
-        <span class="line"></span>
-          <span class="line"></span>
-      </NavToggleChild>
-    )
-  }
-}
+// ====================  BEGIN Nav Component  ====================
 
-class NavToggleChild extends React.Component {
-  render() {
-    return (
-      <div
-        className={ this.props.className }
-        onClick={ this.props.toggleClassName }
-      >
-        { this.props.children }
-      </div>
-    )    
-  }
-}
 
-const Header = () => {
+const Nav = () => {
+
+  const [isActive, setActive] = useState("false");
+
+  const handleToggle = () => {
+    setActive(!isActive);
+  };
+
+  const openNav = () => {
+    setActive(!isActive);
+    handleToggle();
+  };
 
   const router = useRouter();
 
-  return(
+  return (
+    <StyledNav>
+        <Link href='/'><a className="name">Jason Lockwood</a></Link>
 
-  <Navbar>
-    <Nav>
-    <aside>
-      <Link href='/'><a className="name">Jason Lockwood</a></Link>
-    </aside>
+        <div onClick={openNav} className={`icon ${isActive ? "" : "is-active"}`}>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
 
-    <aside>
-    <div className="page-links">
-      <Link href='/about'><a className={router.pathname == "/about" ? "active" : ""}>About</a></Link>
-      <Link href='/about'><a className={router.pathname == "/casestudies" ? "active" : ""}>Case Studies</a></Link>
-      <Link href='/about'><a className={router.pathname == "/articles" ? "active" : ""}>Articles</a></Link>
-    </div>
-    
-      <NavToggle className="icon">
-          
-      </NavToggle>
-    </aside>
-    </Nav>
-
-    <MenuWrapper className="toggled-page-links">
-      <Menu>
+      <div className={`page-links ${isActive ? "" : "is-active"}`}>
         <Link href='/about'><a className={router.pathname == "/about" ? "active" : ""}>About</a></Link>
         <Link href='/about'><a className={router.pathname == "/casestudies" ? "active" : ""}>Case Studies</a></Link>
         <Link href='/about'><a className={router.pathname == "/articles" ? "active" : ""}>Articles</a></Link>
-      </Menu>
-    </MenuWrapper>
+      </div>
+    </StyledNav>
+  );
+}
 
-  </Navbar>
+
+// ====================  END NavToggle Component  ====================
+
+
+
+// ====================  BEGIN NavMenu Component  ====================
+
+
+
+
+// ====================  BEGIN Header Component  ====================
+
+
+const Header = () => {
+
+  return (
+
+    <Navbar>
+      <Nav/>
+    </Navbar>
   )
 }
 
 
-function displayNav() {
-  // alert('Hello!');
-  
-}
+// ====================  BEGIN Header Component  ====================
 
 
 export default Header 
