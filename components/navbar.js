@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { useRouter } from "next/router";
 import React, { useState } from "react";
-import styled, { ThemeProvider } from 'styled-components'
+import styled from 'styled-components'
 
 
 
@@ -39,7 +39,7 @@ const Navbar = styled.nav`
   background: rgba(255, 255, 255, 1);
 
   .name{
-    color: #333941;
+    color: ${(props) => (props.theme.colors.dark_100)};
     font-weight: 700;
     padding: 0;
     margin: 16px
@@ -178,8 +178,8 @@ const Nav = () => {
 
   const router = useRouter();
 
-  return (
-    <StyledNav>
+  return ( 
+      <StyledNav>
         <Link href='/'><a className="name">Jason Lockwood</a></Link>
 
         <div onClick={openNav} className={`icon ${isActive ? "" : "is-active"}`}>
@@ -187,12 +187,12 @@ const Nav = () => {
           <span class="line"></span>
         </div>
 
-      <div className={`page-links ${isActive ? "" : "is-active"}`}>
-        <Link href='/about'><a className={router.pathname == "/about" ? "active" : ""}>About</a></Link>
-        <Link href='/about'><a className={router.pathname == "/casestudies" ? "active" : ""}>Case Studies</a></Link>
-        <Link href='/about'><a className={router.pathname == "/articles" ? "active" : ""}>Articles</a></Link>
-      </div>
-    </StyledNav>
+        <div className={`page-links ${isActive ? "" : "is-active"}`}>
+          <Link href='/about'><a className={router.pathname == "/about" ? "active" : ""}>About</a></Link>
+          <Link href='/about'><a className={router.pathname == "/casestudies" ? "active" : ""}>Case Studies</a></Link>
+          <Link href='/about'><a className={router.pathname == "/articles" ? "active" : ""}>Articles</a></Link>
+        </div>
+      </StyledNav>
   );
 }
 
@@ -214,7 +214,7 @@ const Header = () => {
   return (
 
     <Navbar>
-      <Nav/>
+      <Nav />
     </Navbar>
   )
 }

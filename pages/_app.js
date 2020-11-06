@@ -1,10 +1,15 @@
-import App from 'next/app'
 import React from 'react'
 import '../styles/global.scss'
-import '../styles/variables.scss'
+import { theme } from '../components/theme'
+import { ThemeProvider } from 'styled-components'
+
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return <>
+    <ThemeProvider theme={theme}>
+      <Component {...pageProps} />
+    </ThemeProvider>
+  </>
 }
 
 
