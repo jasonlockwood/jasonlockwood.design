@@ -1,20 +1,18 @@
-import Link from 'next/link'
-import styled, { ThemeProvider } from 'styled-components'
-
+import Link from "next/link";
+import styled from "styled-components";
+import { theme } from "./theme";
 
 const Wrapper = styled.footer`
-  position: fixed;
-  bottom:0;
-  padding: 16px;
+  padding: ${theme.space[3]};
   display: flex;
-  color: grey;
-  font-size:12px;
+  color: ${theme.light.colors.primary_30};
+  font-size: ${theme.fontSizes[0]};
 
   a {
-    padding: 0 16px;
-    color: grey;
+    padding: 0 ${theme.space[3]};
+    color: ${theme.light.colors.primary_30};
   }
-`
+`;
 
 const Footer = () => (
   <Wrapper>
@@ -22,8 +20,10 @@ const Footer = () => (
     <Link href='/about'><a>About</a></Link>
     <Link href='/about'><a>Case Studies</a></Link>
     <Link href='/about'><a>Articles</a></Link> */}
-    <Link href='//www.twitter.com/jlockwoodtweets'><a>@jlockwoodtweets</a></Link>
+    <Link href="//www.twitter.com/jlockwoodtweets">
+      <a>@jlockwoodtweets</a>
+    </Link>
   </Wrapper>
-)
+);
 
-export default Footer
+export default Footer;
