@@ -116,13 +116,7 @@ export default function Layout({ children, home }) {
         <Navbar />
 
         <Main>{children}</Main>
-        {!home && (
-          <div className={styles.backToHome}>
-            <Link href="/">
-              <a>← Back to home</a>
-            </Link>
-          </div>
-        )}
+
         <Footer />
       </Wrapper>
     </>
