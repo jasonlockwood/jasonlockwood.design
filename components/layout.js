@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styled from "styled-components";
-import theme from "./theme"
+import theme from "./theme";
 import Link from "next/link";
 import Navbar from "./navbar";
 import Footer from "./footer";
@@ -13,7 +13,8 @@ const Wrapper = styled.div`
   flex-direction: column;
   -webkit-box-pack: start;
   height: 100%;
-  max-width: 100%;
+  max-width: 1200px;
+  margin: auto;
 `;
 
 const Main = styled.main`

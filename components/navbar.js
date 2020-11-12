@@ -10,6 +10,7 @@ const Navbar = styled.nav`
   position: fixed;
   flex-wrap: wrap;
   width: 100%;
+  max-width: 1200px;
   background: rgba(255, 255, 255, 1);
 
   .name {
