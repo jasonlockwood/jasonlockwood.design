@@ -3,6 +3,8 @@ import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { theme } from "./theme";
 import styled from "styled-components";
+import { motion } from "framer-motion"
+
 
 const Navbar = styled.nav`
   display: flex;
@@ -132,13 +134,8 @@ const StyledNav = styled.div`
 const Nav = () => {
   const [isActive, setActive] = useState("false");
 
-  const handleToggle = () => {
-    setActive(!isActive);
-  };
-
   const openNav = () => {
     setActive(!isActive);
-    handleToggle();
   };
 
   const router = useRouter();
@@ -154,7 +151,7 @@ const Nav = () => {
         <span className="line"></span>
       </div>
 
-      <div className={`page-links ${isActive ? "" : "is-active"}`}>
+      <motion.div className={`page-links ${isActive ? "" : "is-active"}`}>
         <Link href="/about">
           <a className={router.pathname == "/about" ? "active" : ""}>About</a>
         </Link>
@@ -168,7 +165,7 @@ const Nav = () => {
             Articles
           </a>
         </Link>
-      </div>
+      </motion.div>
     </StyledNav>
   );
 };
