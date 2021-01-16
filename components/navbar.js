@@ -61,6 +61,7 @@ const StyledNav = styled.div`
     position: fixed;
     background: ${theme.light.colors.primary_100};
     height: calc(100vh + 2px);
+    width: calc(100vw + 2px);
     justify-content: center;
     align-items: center;
     z-index: 1;
@@ -68,6 +69,8 @@ const StyledNav = styled.div`
     left:0;
     right:0;
     bottom:0;
+    margin:0;
+    
 
     @media ${theme.breakpoint.sm} {
       flex-basis: unset;
