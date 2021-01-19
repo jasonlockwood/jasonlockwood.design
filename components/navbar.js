@@ -127,11 +127,13 @@ const StyledNav = styled.div`
     transition: all 0.3s ease-in-out;
   }
 
+  @media (hover: hover){}
   .icon:hover {
     cursor: pointer;
     transition: 0.2s ease-in-out;
     background: rgba(235, 236, 235, 0.5);
   }
+}
 
   .icon.is-active .line:nth-child(1) {
     -webkit-transform: translateY(4px) rotate(45deg);
