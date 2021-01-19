@@ -6,14 +6,13 @@ import styled from "styled-components";
 import { motion } from "framer-motion"
 
 
+
 const Navbar = styled.nav`
   display: flex;
   flex-direction: column;
-  position: fixed;
   flex-wrap: wrap;
   width: 100%;
   max-width: 1200px;
-  background: rgba(255, 255, 255, 1);
 
   .name {
     color: ${theme.light.colors.primary_100};
@@ -26,12 +25,12 @@ const Navbar = styled.nav`
     padding: 0 ${theme.space[3]};
     color: ${theme.light.colors.primary_60};
     font-weight: ${theme.fontWeights.medium};
-    transition: 0.2s ease-in-out;
     text-decoration: none;
   }
 
   a:hover {
     color: ${theme.light.colors.primary_100};
+    transition: 0.2s ease-in-out;
   }
 
   a.active {
@@ -61,10 +60,43 @@ const StyledNav = styled.div`
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
+    position: fixed;
+    background: ${theme.light.colors.primary_100};
+    height: calc(100vh + 2px);
+    width: calc(100vw + 2px);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:0;
+    
 
     @media ${theme.breakpoint.sm} {
       flex-basis: unset;
       flex-direction: row;
+      background: none;
+      position: inherit;
+      height:unset;
+      width:unset;
+
+    }
+
+    a{
+      font-size:48px;
+      color: ${theme.light.colors.background};
+
+      @media ${theme.breakpoint.sm} {
+      font-size: unset;
+      color: ${theme.light.colors.primary_60};
+
+    }
+    }
+
+    a:hover{
+      color: ${theme.light.colors.primary_30};
     }
   }
 
@@ -74,6 +106,11 @@ const StyledNav = styled.div`
     margin: ${theme.space[2]};
     padding: ${theme.space[2]};
     border-radius: 50%;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: saturate(180%) blur(20px);
+    position: fixed;
+    right: 16px;
+    z-index: 2;
 
     @media ${theme.breakpoint.sm} {
       display: none;
@@ -141,6 +178,7 @@ const Nav = () => {
   const router = useRouter();
 
   return (
+    <>
     <StyledNav>
       <Link href="/">
         <a className="name">Jason Lockwood</a>
@@ -167,20 +205,24 @@ const Nav = () => {
         </Link>
       </motion.div>
     </StyledNav>
+
+    </>
   );
 };
 
-// ====================  END NavToggle Component  ====================
+// ====================  END Nav Component  ====================
 
 // ====================  BEGIN NavMenu Component  ====================
+
+
 
 // ====================  BEGIN Header Component  ====================
 
 const Header = () => {
   return (
-    <Navbar>
-      <Nav />
-    </Navbar>
+      <Navbar>
+        <Nav />
+      </Navbar>
   );
 };
 
