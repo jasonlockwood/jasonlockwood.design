@@ -70,7 +70,6 @@ const StyledNav = styled.div`
     right:0;
     bottom:0;
     margin:0;
-    transition: all 0.2s ease-in-out;
     
 
     @media ${theme.breakpoint.sm} {
