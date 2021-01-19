@@ -127,7 +127,7 @@ const StyledNav = styled.div`
     transition: all 0.3s ease-in-out;
   }
 
-  @media (hover: hover){}
+  @media (hover: hover){
   .icon:hover {
     cursor: pointer;
     transition: 0.2s ease-in-out;
