@@ -23,12 +23,12 @@ const Navbar = styled.nav`
     padding: 0 ${theme.space[3]};
     color: ${theme.light.colors.primary_60};
     font-weight: ${theme.fontWeights.medium};
-    transition: 0.2s ease-in-out;
     text-decoration: none;
   }
 
   a:hover {
     color: ${theme.light.colors.primary_100};
+    transition: 0.2s ease-in-out;
   }
 
   a.active {
@@ -70,16 +70,28 @@ const StyledNav = styled.div`
     right:0;
     bottom:0;
     margin:0;
+    transition: all 0.2s ease-in-out;
     
 
     @media ${theme.breakpoint.sm} {
       flex-basis: unset;
       flex-direction: row;
+      background: none;
+      position: inherit;
+      height:unset;
+      width:unset;
+
     }
 
     a{
       font-size:48px;
       color: ${theme.light.colors.background};
+
+      @media ${theme.breakpoint.sm} {
+      font-size: unset;
+      color: ${theme.light.colors.primary_60};
+
+    }
     }
 
     a:hover{
