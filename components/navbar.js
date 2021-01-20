@@ -19,6 +19,7 @@ const Navbar = styled.nav`
     font-weight: ${theme.fontWeights.bold};
     padding: 0;
     margin: ${theme.space[3]};
+    line-height:1.375;
   }
 
   a {
@@ -183,7 +184,7 @@ const Nav = () => {
     <>
     <StyledNav>
       <Link href="/">
-        <a className="name">⬇️</a>
+        <a className="name">👽</a>
       </Link>
 
       <div onClick={openNav} className={`icon ${isActive ? "" : "is-active"}`}>
