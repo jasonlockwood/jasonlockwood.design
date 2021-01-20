@@ -18,7 +18,7 @@ const Wrapper = styled.div`
 `;
 
 const Main = styled.main`
-  margin-top: 92px;
+  display:flex;
 `;
 
 export default function Layout({ children, home }) {

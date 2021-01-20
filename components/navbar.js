@@ -19,6 +19,7 @@ const Navbar = styled.nav`
     font-weight: ${theme.fontWeights.bold};
     padding: 0;
     margin: ${theme.space[3]};
+    line-height:1.375;
   }
 
   a {
@@ -66,7 +67,7 @@ const StyledNav = styled.div`
     width: calc(100vw + 2px);
     justify-content: center;
     align-items: center;
-    z-index: 1;
+    z-index: 2;
     top:0;
     left:0;
     right:0;
@@ -110,7 +111,8 @@ const StyledNav = styled.div`
     backdrop-filter: saturate(180%) blur(20px);
     position: fixed;
     right: 16px;
-    z-index: 2;
+    top: 16px;
+    z-index: 3;
 
     @media ${theme.breakpoint.sm} {
       display: none;
@@ -183,7 +185,7 @@ const Nav = () => {
     <>
     <StyledNav>
       <Link href="/">
-        <a className="name">Jason Lockwood</a>
+        <a className="name">👽</a>
       </Link>
 
       <div onClick={openNav} className={`icon ${isActive ? "" : "is-active"}`}>
