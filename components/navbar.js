@@ -183,7 +183,7 @@ const Nav = () => {
     <>
     <StyledNav>
       <Link href="/">
-        <a className="name">Jason Lockwood</a>
+        <a className="name">⬇️</a>
       </Link>
 
       <div onClick={openNav} className={`icon ${isActive ? "" : "is-active"}`}>

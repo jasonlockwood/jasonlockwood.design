@@ -17,6 +17,9 @@ const Wrapper = styled.div`
   margin: auto;
 `;
 
+const Main = styled.main`
+  display:flex;
+`;
 
 export default function Layout({ children, home }) {
   return (
