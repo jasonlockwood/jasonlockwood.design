@@ -111,6 +111,7 @@ const StyledNav = styled.div`
     backdrop-filter: saturate(180%) blur(20px);
     position: fixed;
     right: 16px;
+    top: 16px;
     z-index: 3;
 
     @media ${theme.breakpoint.sm} {
