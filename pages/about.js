@@ -1,11 +1,12 @@
 import Head from 'next/head'
-import Layout from '../components/layout'
+import Layout, { siteTitle } from '../components/layout'
 
-export default function FirstPost() {
+
+export default function About() {
   return (
-    <Layout>
+    <Layout home>
       <Head>
-        <title>About</title>
+      <title>{siteTitle}</title>
       </Head>
       <h1>Frank Herbert</h1>
       <p>
