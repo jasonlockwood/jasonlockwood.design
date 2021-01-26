@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { theme } from "./theme";
+import { theme } from "../styles/theme";
 
 const Wrapper = styled.section`
 
@@ -18,11 +18,8 @@ const Wrapper = styled.section`
   }
 
   h1 {
-    font-size: ${theme.fontSizes[3]};
-    font-weight: ${theme.fontWeights.bold};
     margin: ${theme.space[5]};
     color: ${theme.light.colors.primary_30};
-    line-height: ${theme.lineHeights.body};
     transition: all .2s ease-in-out;
 
     @media ${theme.breakpoint.sm}{
