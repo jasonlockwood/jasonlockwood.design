@@ -7,9 +7,10 @@ const Wrapper = styled.section`
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
+  margin: ${theme.space[0]};
 
   @media ${theme.breakpoint.sm} {
-    margin: ${theme.space[3]};
+    
     flex-direction: row;
   }
 

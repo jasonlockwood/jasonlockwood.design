@@ -1,5 +1,5 @@
-import { createGlobalStyle} from "styled-components";
-import { theme } from '../styles/theme'
+import { createGlobalStyle } from "styled-components";
+import { theme } from "../styles/theme";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -8,7 +8,6 @@ body {
   font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
-  font-size: 18px;
   width: 100%;
   height: 100%;
 }
@@ -25,9 +24,25 @@ body {
   appearance: none;
 }
 
+section{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: ${theme.space[5]};
+
+    @media ${theme.breakpoint.sm} {
+        margin: ${theme.space[3]};
+    }
+}
+
 h1, h2, h3, h4 ,h5{
     letter-spacing: -1.2px;
     font-weight: 700;
+}
+
+p{
+    letter-spacing: 0.2px;
+    font-weight: 500;
 }
 
 h1 {
@@ -50,10 +65,6 @@ h1 {
 a {
   color: #0070f3;
   text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
 }
 
 img {
