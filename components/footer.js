@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
-import { theme } from "./theme";
+import { theme } from "../styles/theme";
 
 const Wrapper = styled.footer`
   padding: ${theme.space[3]};

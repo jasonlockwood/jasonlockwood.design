@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
-import { theme } from "./theme";
+import { theme } from "../styles/theme";
 import styled from "styled-components";
 import { motion } from "framer-motion"
 

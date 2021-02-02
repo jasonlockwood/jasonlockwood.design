@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styled from "styled-components";
-import theme from "./theme";
+import theme from "../styles/theme";
 import Link from "next/link";
 import Navbar from "./navbar";
 import Footer from "./footer";
@@ -18,13 +18,14 @@ const Wrapper = styled.div`
 `;
 
 const Main = styled.main`
-  display:flex;
 `;
 
 export default function Layout({ children, home }) {
   return (
     <>
       <Head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"></link>
+
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="apple-touch-icon"
