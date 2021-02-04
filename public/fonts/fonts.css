@@ -1,0 +1,5 @@
+@font-face {
+    font-family: "Gelica-SemiBold";
+    src: url('gelica-sb.woff') format('woff2'), 
+         url('gelica-sb.woff') format('woff');
+  }

@@ -2,10 +2,12 @@ import { createGlobalStyle } from "styled-components";
 import { theme } from "../styles/theme";
 
 const GlobalStyle = createGlobalStyle`
+  
+
 
 html,
 body {
-  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+  font-family: "Gelica-SemiBold", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   width: 100%;

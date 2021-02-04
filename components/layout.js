@@ -24,7 +24,10 @@ export default function Layout({ children, home }) {
   return (
     <>
       <Head>
+
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"></link>
+
+        <link rel="stylesheet" href="/fonts/fonts.css"></link>
 
         <link rel="icon" href="/favicon.ico" />
         <link
