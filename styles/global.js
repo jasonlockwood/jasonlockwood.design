@@ -24,6 +24,11 @@ body {
   text-decoration: none;
   text-rendering: optimizelegibility;
   appearance: none;
+
+  ::selection {
+    background-color: ${theme.light.colors.primary};
+    color: white;
+  }
 }
 
 section{
@@ -43,8 +48,11 @@ h1, h2, h3, h4 ,h5{
 }
 
 p{
+    font-family:  -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     letter-spacing: 0.2px;
     font-weight: 500;
+    color: ${theme.light.colors.primary_80};
 }
 
 h1 {
@@ -64,9 +72,36 @@ h1 {
     }
 }
 
-a {
-  color: #0070f3;
+a, a > span {
+  color: ${theme.light.colors.primary};
   text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    transition: transform .5s ease;
+  }
+}
+
+.link-effect{
+
+  &:before {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: ${theme.light.colors.primary};
+    transform:  translateX(-100%);
+    opacity: 0;
+  }
+  &:hover:before {
+    transform:  translateX(0);
+    opacity: 1;
+  }
+
 }
 
 img {

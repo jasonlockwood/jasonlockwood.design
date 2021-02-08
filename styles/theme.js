@@ -14,6 +14,15 @@ const windowSize = {
 
 
 export const theme = {
+
+  breakpoint: {
+    xs: `(min-width: ${windowSize.xs})`,
+    sm: `(min-width: ${windowSize.sm})`,
+    md: `(min-width: ${windowSize.md})`,
+    lg: `(min-width: ${windowSize.lg})`,
+    xl: `(min-width: ${windowSize.xl})`
+  },
+
   light: {
     colors: {
       primary_100: "#333941",
@@ -24,7 +33,9 @@ export const theme = {
       primary_10: "#EBECEB",
       background: "#FFFFFF",
       royalperp: "#6D6BD9",
-      tealectric: "#6BD9BF"
+      tealectric: "#6BD9BF",
+      primary: "#86C9A9"
+
     }
   },
 
@@ -38,7 +49,8 @@ export const theme = {
       primary_10: "#474C54",
       background: "#333941",
       royalperp: "#6D6BD9",
-      tealectric: "#6BD9BF"
+      tealectric: "#6BD9BF",
+      primary: "#FAC16D"
     }
   },
 
@@ -75,15 +87,9 @@ export const theme = {
     "64px", // 7
     "96px", // 8
     "128px", // 9
-  ],
+  ]
 
-  breakpoint: {
-    xs: `(min-width: ${windowSize.xs})`,
-    sm: `(min-width: ${windowSize.sm})`,
-    md: `(min-width: ${windowSize.md})`,
-    lg: `(min-width: ${windowSize.lg})`,
-    xl: `(min-width: ${windowSize.xl})`
-  }
+
 };
 
 
