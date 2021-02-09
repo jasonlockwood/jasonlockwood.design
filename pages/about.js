@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
 import styled from "styled-components";
 import { theme } from "../styles/theme";
@@ -33,11 +32,7 @@ const Wrapper = styled.section`
 
 export default function About() {
   return (
-    <Layout home>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
-
+    <Layout>
       <Wrapper>
         
         <img src="/images/About.png" alt="Profile Picture" />

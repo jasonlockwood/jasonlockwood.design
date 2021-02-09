@@ -15,7 +15,7 @@ const Navbar = styled.nav`
   max-width: 1200px;
 
   .name {
-    color: ${theme.light.colors.primary_100};
+    color: ${theme.light.colors.shade_100};
     font-weight: ${theme.fontWeights.bold};
     padding: 0;
     margin: ${theme.space[3]};
@@ -24,18 +24,18 @@ const Navbar = styled.nav`
 
   a {
     padding: 0 ${theme.space[3]};
-    color: ${theme.light.colors.primary_60};
+    color: ${theme.light.colors.shade_60};
     font-weight: ${theme.fontWeights.medium};
     text-decoration: none;
   }
 
   a:hover {
-    color: ${theme.light.colors.primary_100};
+    color: ${theme.light.colors.shade_100};
     transition: 0.2s ease-in-out;
   }
 
   a.active {
-    color: ${theme.light.colors.primary_10};
+    color: ${theme.light.colors.shade_10};
     cursor: default;
   }
 `;
@@ -62,7 +62,7 @@ const StyledNav = styled.div`
     flex-direction: column;
     flex-basis: 100%;
     position: fixed;
-    background: ${theme.light.colors.primary_100};
+    background: ${theme.light.colors.shade_100};
     height: calc(100vh + 2px);
     width: calc(100vw + 2px);
     justify-content: center;
@@ -91,13 +91,13 @@ const StyledNav = styled.div`
 
       @media ${theme.breakpoint.sm} {
       font-size: unset;
-      color: ${theme.light.colors.primary_60};
+      color: ${theme.light.colors.shade_60};
 
     }
     }
 
     a:hover{
-      color: ${theme.light.colors.primary_30};
+      color: ${theme.light.colors.shade_30};
     }
   }
 
@@ -121,7 +121,7 @@ const StyledNav = styled.div`
   .icon .line {
     width: ${theme.space[3]};
     height: 1px;
-    background-color: ${theme.light.colors.primary_90};
+    background-color: ${theme.light.colors.shade_90};
     display: block;
     margin: 7px auto;
     -webkit-transition: all 0.3s ease-in-out;

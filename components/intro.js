@@ -20,7 +20,7 @@ const Wrapper = styled.section`
 
   h1 {
     margin: ${theme.space[5]};
-    color: ${theme.light.colors.primary_30};
+    color: ${theme.light.colors.shade_30};
     transition: all .2s ease-in-out;
 
     @media ${theme.breakpoint.sm}{
@@ -40,7 +40,7 @@ const Wrapper = styled.section`
     }
 
     span {
-      color: ${theme.light.colors.primary_80};
+      color: ${theme.light.colors.shade_80};
     }
   }
 

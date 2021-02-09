@@ -14,6 +14,8 @@ function MyApp({ Component, pageProps }) {
       <GlobalStyle />
 
       <Head>
+        
+      <title>{siteTitle}</title>
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"></link>
 
