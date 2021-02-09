@@ -14,31 +14,39 @@ const windowSize = {
 
 
 export const theme = {
+
+  breakpoint: {
+    xs: `(min-width: ${windowSize.xs})`,
+    sm: `(min-width: ${windowSize.sm})`,
+    md: `(min-width: ${windowSize.md})`,
+    lg: `(min-width: ${windowSize.lg})`,
+    xl: `(min-width: ${windowSize.xl})`
+  },
+
   light: {
     colors: {
-      primary_100: "#333941",
-      primary_90: "#474C54",
-      primary_80: "#575C62",
-      primary_60: "#7B7E83",
-      primary_30: "#B0B2B4",
-      primary_10: "#EBECEB",
+      shade_100: "#333941",
+      shade_90: "#474C54",
+      shade_80: "#575C62",
+      shade_60: "#7B7E83",
+      shade_30: "#B0B2B4",
+      shade_10: "#EBECEB",
       background: "#FFFFFF",
-      royalperp: "#6D6BD9",
-      tealectric: "#6BD9BF"
+      primary: "#86C9A9"
+
     }
   },
 
   dark:  {
     colors: {
-      primary_100: "#FFFFFF",
-      primary_90: "#EBECEB",
-      primary_80: "#B0B2B4",
-      primary_60: "#7B7E83",
-      primary_30: "#575C62",
-      primary_10: "#474C54",
+      shade_100: "#FFFFFF",
+      shade_90: "#EBECEB",
+      shade_80: "#B0B2B4",
+      shade_60: "#7B7E83",
+      shade_30: "#575C62",
+      shade_10: "#474C54",
       background: "#333941",
-      royalperp: "#6D6BD9",
-      tealectric: "#6BD9BF"
+      primary: "#FAC16D"
     }
   },
 
@@ -75,15 +83,9 @@ export const theme = {
     "64px", // 7
     "96px", // 8
     "128px", // 9
-  ],
+  ]
 
-  breakpoint: {
-    xs: `(min-width: ${windowSize.xs})`,
-    sm: `(min-width: ${windowSize.sm})`,
-    md: `(min-width: ${windowSize.md})`,
-    lg: `(min-width: ${windowSize.lg})`,
-    xl: `(min-width: ${windowSize.xl})`
-  }
+
 };
 
 

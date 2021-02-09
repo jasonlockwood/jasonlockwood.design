@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
 import styled from "styled-components";
 import { theme } from "../styles/theme";
@@ -33,11 +32,7 @@ const Wrapper = styled.section`
 
 export default function About() {
   return (
-    <Layout home>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
-
+    <Layout>
       <Wrapper>
         
         <img src="/images/About.png" alt="Profile Picture" />
@@ -51,7 +46,7 @@ export default function About() {
         <p>
           Most recently, I worked as Senior Product Designer at{" "}
           <Link href="http://www.informed.co">
-            <a>Informed.co</a>
+            <a className="link-effect">Informed.co</a>
           </Link>
           . In my 5 years at Informed.co, I designed the brand identity, worked across teams to design and code successful user experiences for the web app, built a foundational design system to boost the acceleration and quality of team output, shaped design processes, and learned a ton from some really great people.
         </p>
