@@ -6,10 +6,6 @@ import Intro from '../components/intro'
 export default function Home() {
   return (
     <Layout home>
-      
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
 
       <Intro />
 
