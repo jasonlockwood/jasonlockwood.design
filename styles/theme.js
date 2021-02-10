@@ -53,13 +53,15 @@ export const theme = {
   },
 
   fontSizes: [
-    "0.8rem", // 0
-    "1rem", // 1
-    "1.2rem", // 2
-    "1.5rem", // 3
-    "1.875rem", // 4
-    "2.25rem", // 5
-    "2.75rem", // 6
+    "0.75rem",  // 0 <--12px
+    "1rem",     // 1 <--16px
+    "1.125rem", // 2 <--18px
+    "1.5rem",   // 3 <--24px
+    "2rem",     // 4 <--32px
+    "2.25rem",  // 5 <--36px
+    "2.5rem",   // 6 <--40px
+    "3rem",     // 7 <--48px
+    "3.5rem",   // 8 <--56px
   ],
 
   fontWeights: {
@@ -74,7 +76,7 @@ export const theme = {
   
   lineHeights: {
     body: "1.4",
-    heading: "1.2",
+    heading: "1",
     code: "1.6",
   },
 

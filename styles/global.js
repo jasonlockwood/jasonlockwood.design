@@ -9,7 +9,7 @@ html,
 body {
   font-family: "Gelica-SemiBold", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  line-height: 1.6;
+  line-height: ${theme.lineHeights.body};
   width: 100%;
   height: 100%;
 }
@@ -45,6 +45,7 @@ section{
 h1, h2, h3, h4 ,h5{
     letter-spacing: -1.2px;
     font-weight: 700;
+    line-height: ${theme.lineHeights.heading};
 }
 
 p{
@@ -52,11 +53,10 @@ p{
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     letter-spacing: 0.2px;
     font-weight: 500;
-    color: ${theme.light.colors.primary_80};
+    color: ${theme.light.colors.shade_60};
 }
 
 h1 {
-    line-height: ${theme.lineHeights.body};
     font-size: ${theme.fontSizes[3]};
 
     @media ${theme.breakpoint.sm}{
@@ -68,7 +68,7 @@ h1 {
     }
 
     @media ${theme.breakpoint.lg} {
-      font-size: ${theme.fontSizes[6]};
+      font-size: ${theme.fontSizes[8]};
     }
 }
 

@@ -3,7 +3,6 @@ import { theme } from "../styles/theme";
 
 const Button = styled.button`
   padding: ${theme.space[3]} ${theme.space[5]};
-  margin: ${theme.space[2]};
   display: flex;
   color: ${theme.light.colors.shade_80};
   font-size: ${theme.fontSizes[0]};
