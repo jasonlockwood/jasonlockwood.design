@@ -32,7 +32,8 @@ export const theme = {
       shade_30: "#B0B2B4",
       shade_10: "#EBECEB",
       background: "#FFFFFF",
-      primary: "#86C9A9"
+      primary: "#86C9A9",
+      primary_hover: "#9ADABC"
 
     }
   },
@@ -47,6 +48,7 @@ export const theme = {
       shade_10: "#474C54",
       background: "#333941",
       primary: "#FAC16D"
+      
     }
   },
 
@@ -66,6 +68,10 @@ export const theme = {
     bold: "700",
   },
 
+  borderRadius: {
+    standard: "8px"
+  },
+  
   lineHeights: {
     body: "1.4",
     heading: "1.2",
@@ -84,7 +90,6 @@ export const theme = {
     "96px", // 8
     "128px", // 9
   ]
-
 
 };
 

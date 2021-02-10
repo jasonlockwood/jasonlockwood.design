@@ -76,7 +76,6 @@ a, a > span {
   color: ${theme.light.colors.primary};
   text-decoration: none;
   position: relative;
-  overflow: hidden;
   display: inline-flex;
 
   &:before, &:after {
@@ -87,6 +86,7 @@ a, a > span {
 }
 
 .link-effect{
+  overflow: hidden;
 
   &:before {
     left: 0;

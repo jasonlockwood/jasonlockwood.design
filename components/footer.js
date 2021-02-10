@@ -5,12 +5,12 @@ import { theme } from "../styles/theme";
 const Wrapper = styled.footer`
   padding: ${theme.space[3]};
   display: flex;
-  color: ${theme.light.colors.primary_30};
+  color: ${theme.light.colors.shade_30};
   font-size: ${theme.fontSizes[0]};
 
   a {
     padding: 0 ${theme.space[3]};
-    color: ${theme.light.colors.primary_30};
+    color: ${theme.light.colors.shade_30};
   }
 `;
 
