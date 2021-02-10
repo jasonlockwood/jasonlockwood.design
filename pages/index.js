@@ -1,22 +1,14 @@
 import Layout, { siteTitle } from '../components/layout'
 import Intro from '../components/intro'
-import Button from '../components/button'
-import Link from "next/link";
+import Hero from '../components/hero'
+
 
 
 export default function Home() {
   return (
-    <Layout home>
+    <Layout>
 
-      <Intro />
-
-      <Link href="/about">
-        <a><Button primary>Find out more</Button></a>
-      </Link>
-
-      <Link href="/">
-        <a><Button secondary>Get in touch</Button></a>
-      </Link>
+      <Hero />
 
     </Layout>
   )
