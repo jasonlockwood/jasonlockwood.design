@@ -6,109 +6,105 @@ import Image from "next/image";
 import { theme } from "../styles/theme";
 
 const Hero = styled.div`
+  h1 {
+    color: ${theme.light.colors.shade_90};
+  }
 
-h1{
-  color: ${theme.light.colors.shade_90};
-
-}
-
-.muted{
+  .muted {
     color: ${theme.light.colors.shade_30};
   }
 
-span{
-  color: ${theme.light.colors.shade_10};
-  margin-left: .25rem;
-}
-
-button{
-  margin-right: ${theme.space[3]};
-}
-
-img{
-  border-radius:100%;
-}
-
-
-.border{
-  border-radius: 100%;
-  border: 2px solid ${theme.light.colors.shade_90};
-  display: inline-flex;
-  position: relative;
-
-  &:before, &:after {
-    content: '';
-    position: absolute;
-    transition: transform .2s ease-in-out;
+  span {
+    color: ${theme.light.colors.shade_10};
+    margin-left: 0.25rem;
   }
 
-  &:before{
-    height:88px;
-    width:88px;
-    background: ${theme.light.colors.primary};
-    border: 2px solid ${theme.light.colors.shade_90};
+  button {
+    margin-right: ${theme.space[3]};
+  }
+
+  img {
     border-radius: 100%;
-    left:6px;
-    top: -2px;
-    position: absolute;
-    z-index: -1;
-    transform:  translateX(0);
-
   }
 
-  &:after{
-    height:88px;
-    width:88px;
-    background: ${theme.light.colors.shade_10};
-    border: 2px solid ${theme.light.colors.shade_90};
+  .border {
     border-radius: 100%;
-    left:14px;
-    top: -2px;
-    position: absolute;
-    z-index: -2;
-    transform:  translateX(0);
-  }
+    border: 2px solid ${theme.light.colors.shade_90};
+    display: inline-flex;
+    position: relative;
 
-  &:hover:before {
-    transform:  translateX(8px);
-    background: ${theme.light.colors.primary_hover};
-  }
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      transition: transform 0.2s ease-in-out;
+    }
 
-  &:hover:after {
-    transform:  translateX(16px);
-    background: ${theme.light.colors.background};
-  }
-}
+    &:before {
+      height: 88px;
+      width: 88px;
+      background: ${theme.light.colors.primary};
+      border: 2px solid ${theme.light.colors.shade_90};
+      border-radius: 100%;
+      left: 6px;
+      top: -2px;
+      position: absolute;
+      z-index: -1;
+      transform: translateX(0);
+    }
 
+    &:after {
+      height: 88px;
+      width: 88px;
+      background: ${theme.light.colors.shade_10};
+      border: 2px solid ${theme.light.colors.shade_90};
+      border-radius: 100%;
+      left: 14px;
+      top: -2px;
+      position: absolute;
+      z-index: -2;
+      transform: translateX(0);
+    }
+
+    &:hover:before {
+      transform: translateX(8px);
+      background: ${theme.light.colors.primary_hover};
+    }
+
+    &:hover:after {
+      transform: translateX(16px);
+      background: ${theme.light.colors.background};
+    }
+  }
 `;
-
-
-
 
 const HeroComponent = () => (
   <Hero>
-    <Spacing extra/>
+    <Spacing extra />
     <div className="border">
-    <Image
+      <Image
         src="/images/me.jpg"
         alt="My ugly mug"
         width={88}
         height={88}
-        priority='true'
-    />
+        priority="true"
+      />
     </div>
-    <Spacing standard/>
+    <Spacing standard />
     <h1>Jason Lockwood</h1>
     <h1 className="muted">Digital Product Design</h1>
-    <Spacing standard/>
+    <Spacing standard />
     <p>
-      I am a team player who takes pride in crafting impactful product experiences that are pleasing to use. Passionate, therefore naturally curious about all things
-      design.
-      Most recently, I put my craft & passion to work at{' '}
-        <a target="_blank" href="http://www.informed.co" className="link-effect">Informed.co</a>
+      I am a team player who takes pride in crafting impactful product
+      experiences that are pleasing to use. Passionate, therefore naturally
+      curious about all things design. Most recently, I put my craft & passion
+      to work at{" "}
+      <a target="_blank" href="http://www.informed.co" className="link-effect">
+        Informed.co
+      </a>
       <span>↗</span>
     </p>
-    <Spacing standard/>
+    <Spacing standard />
     <Link href="/about">
       <a>
         <Button primary>Find out more</Button>
@@ -120,7 +116,7 @@ const HeroComponent = () => (
         <Button secondary>Get in touch</Button>
       </a>
     </Link>
-    <Spacing extra/>
+    <Spacing extra />
   </Hero>
 );
 
