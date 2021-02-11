@@ -10,6 +10,8 @@ export default function Home() {
 
       <Hero />
 
+      <hr/>
+
     </Layout>
   )
 }

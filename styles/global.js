@@ -108,6 +108,11 @@ img {
   max-width: 100%;
   display: block;
 }
+
+hr{
+  height:2px;
+  background: ${theme.light.colors.shade_10}
+}
 `;
 
 export default GlobalStyle;
