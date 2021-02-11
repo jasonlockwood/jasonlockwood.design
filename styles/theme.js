@@ -1,5 +1,3 @@
-
-
 //========== DEFINES VALUES OF BREAKPOINTS AS 'windowSize' =================
 
 const windowSize = {
@@ -12,15 +10,13 @@ const windowSize = {
 
 //========== END DEFINES VALUES OF BREAKPOINTS AS 'windowSize' =================
 
-
 export const theme = {
-
   breakpoint: {
     xs: `(min-width: ${windowSize.xs})`,
     sm: `(min-width: ${windowSize.sm})`,
     md: `(min-width: ${windowSize.md})`,
     lg: `(min-width: ${windowSize.lg})`,
-    xl: `(min-width: ${windowSize.xl})`
+    xl: `(min-width: ${windowSize.xl})`,
   },
 
   light: {
@@ -33,12 +29,11 @@ export const theme = {
       shade_10: "#EBECEB",
       background: "#FFFFFF",
       primary: "#86C9A9",
-      primary_hover: "#9ADABC"
-
-    }
+      primary_hover: "#9ADABC",
+    },
   },
 
-  dark:  {
+  dark: {
     colors: {
       shade_100: "#FFFFFF",
       shade_90: "#EBECEB",
@@ -47,21 +42,20 @@ export const theme = {
       shade_30: "#575C62",
       shade_10: "#474C54",
       background: "#333941",
-      primary: "#FAC16D"
-      
-    }
+      primary: "#FAC16D",
+    },
   },
 
   fontSizes: [
-    "0.75rem",  // 0 <--12px
-    "1rem",     // 1 <--16px
+    "0.75rem", // 0 <--12px
+    "1rem", // 1 <--16px
     "1.125rem", // 2 <--18px
-    "1.5rem",   // 3 <--24px
-    "2rem",     // 4 <--32px
-    "2.25rem",  // 5 <--36px
-    "2.5rem",   // 6 <--40px
-    "3rem",     // 7 <--48px
-    "3.5rem",   // 8 <--56px
+    "1.5rem", // 3 <--24px
+    "2rem", // 4 <--32px
+    "2.25rem", // 5 <--36px
+    "2.5rem", // 6 <--40px
+    "3rem", // 7 <--48px
+    "3.5rem", // 8 <--56px
   ],
 
   fontWeights: {
@@ -71,9 +65,9 @@ export const theme = {
   },
 
   borderRadius: {
-    standard: "8px"
+    standard: "8px",
   },
-  
+
   lineHeights: {
     body: "1.4",
     heading: "1",
@@ -91,8 +85,5 @@ export const theme = {
     "64px", // 7
     "96px", // 8
     "128px", // 9
-  ]
-
+  ],
 };
-
-

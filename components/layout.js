@@ -3,8 +3,6 @@ import theme from "../styles/theme";
 import Navbar from "./navbar";
 import Footer from "./footer";
 
-
-
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -14,14 +12,11 @@ const Wrapper = styled.div`
   margin: auto;
 `;
 
-const Main = styled.main`
-`;
+const Main = styled.main``;
 
 export default function Layout({ children, home }) {
   return (
     <>
-      
-
       <Wrapper>
         <Navbar />
 

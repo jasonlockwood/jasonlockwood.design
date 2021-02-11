@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Button from "../components/button";
+import Label from "../components/label";
 import Spacing from "../components/spacing";
 import Link from "next/link";
 import Image from "next/image";
