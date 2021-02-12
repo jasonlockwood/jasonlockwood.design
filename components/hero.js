@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import Button from "../components/button";
-import Label from "../components/label";
-import Spacing from "../components/spacing";
+import Button from "./button";
+import Space from "./spacing";
 import Link from "next/link";
 import Image from "next/image";
 import { theme } from "../styles/theme";
@@ -22,6 +21,7 @@ const Hero = styled.div`
 
   button {
     margin-right: ${theme.space[3]};
+    display: inline-flex;
   }
 
   img {
@@ -81,7 +81,7 @@ const Hero = styled.div`
 
 const HeroComponent = () => (
   <Hero>
-    <Spacing extra />
+    <Space extra />
     <div className="border">
       <Image
         src="/images/me.jpg"
@@ -91,10 +91,10 @@ const HeroComponent = () => (
         priority="true"
       />
     </div>
-    <Spacing standard />
+    <Space standard />
     <h1>Jason Lockwood</h1>
     <h1 className="muted">Digital Product Design</h1>
-    <Spacing standard />
+    <Space standard />
     <p>
       I am a team player who takes pride in crafting impactful product
       experiences that are pleasing to use. Passionate, therefore naturally
@@ -105,7 +105,7 @@ const HeroComponent = () => (
       </a>
       <span>↗</span>
     </p>
-    <Spacing standard />
+    <Space standard />
     <Link href="/about">
       <a>
         <Button primary>Find out more</Button>
@@ -117,7 +117,7 @@ const HeroComponent = () => (
         <Button secondary>Get in touch</Button>
       </a>
     </Link>
-    <Spacing extra />
+    <Space extra />
   </Hero>
 );
 

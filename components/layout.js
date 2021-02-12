@@ -14,11 +14,11 @@ const Wrapper = styled.div`
 
 const Main = styled.main``;
 
-export default function Layout({ children, home }) {
+export default function Layout({ children }) {
   return (
     <>
       <Wrapper>
-        <Navbar />
+        {/* <Navbar /> */}
 
         <Main>{children}</Main>
 
