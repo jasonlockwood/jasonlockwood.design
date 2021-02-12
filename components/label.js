@@ -13,6 +13,7 @@ const Label = styled.label`
   border: 2px solid ${theme.light.colors.shade_80};
   border-radius: ${theme.borderRadius.standard};
   background: none;
+  width: fit-content;
 
 `;
 

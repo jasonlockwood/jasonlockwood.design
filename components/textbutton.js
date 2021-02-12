@@ -13,15 +13,21 @@ const TextButton = styled.button`
   user-select: none;
   background: none;
 
-  &:before {
+  &:after {
     content: "→";
-    position: absolute;
+    position: relative;
     transition: transform 0.2s ease-in-out;
-    right: 0px;
+    left: 8px;
+    top: -4px;
+    color: ${theme.light.colors.primary};
+    font-size: ${theme.fontSizes[2]}
+  }
+
+  &:hover{
     color: ${theme.light.colors.primary};
   }
 
-  &:hover:before {
+  &:hover:after {
     transform: translateX(3px);
   }
 

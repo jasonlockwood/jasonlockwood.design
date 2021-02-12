@@ -46,6 +46,8 @@ h1, h2, h3, h4 ,h5{
     letter-spacing: -1.2px;
     font-weight: 700;
     line-height: ${theme.lineHeights.heading};
+    color: ${theme.light.colors.shade_80};
+    display: flex;
 }
 
 p{
@@ -72,11 +74,18 @@ h1 {
     }
 }
 
+h2 {
+    font-size: ${theme.fontSizes[3]};
+
+    @media ${theme.breakpoint.sm}{
+      font-size: ${theme.fontSizes[5]};
+    }
+}
+
 a, a > span {
   color: ${theme.light.colors.primary};
   text-decoration: none;
   position: relative;
-  display: inline-flex;
 
   &:before, &:after {
     content: '';
