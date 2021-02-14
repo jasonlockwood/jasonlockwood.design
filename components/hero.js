@@ -14,11 +14,6 @@ const Hero = styled.div`
     color: ${theme.light.colors.shade_30};
   }
 
-  span {
-    color: ${theme.light.colors.shade_10};
-    margin-left: 0.25rem;
-  }
-
   button {
     margin-right: ${theme.space[3]};
     display: inline-flex;
@@ -103,7 +98,7 @@ const HeroComponent = () => (
       <a target="_blank" href="http://www.informed.co" className="link-effect">
         Informed.co
       </a>
-      <span>↗</span>
+      <span className="outlink">↗</span>
     </p>
     <Space standard />
     <Link href="/about">

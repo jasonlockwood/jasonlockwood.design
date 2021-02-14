@@ -4,6 +4,12 @@ import { theme } from "../styles/theme";
 const Space = styled.div`
   width: 100%;
   display: block;
+
+  ${(props) =>
+    props.y8 &&
+    `
+    height: ${props.theme.space[2]};
+  `}
   ${(props) =>
     props.tiny &&
     `

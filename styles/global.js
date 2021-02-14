@@ -87,15 +87,22 @@ a, a > span {
   text-decoration: none;
   position: relative;
 
+
   &:before, &:after {
     content: '';
     position: absolute;
     transition: transform .5s ease;
   }
+
+  &:hover{
+    color: ${theme.light.colors.primary_hover};
+  }
+
 }
 
 .link-effect{
   overflow: hidden;
+  display: inline-flex;
 
   &:before {
     left: 0;
@@ -112,6 +119,13 @@ a, a > span {
   }
 
 }
+
+span.outlink {
+    color: ${theme.light.colors.shade_30};
+    margin-left: 0.25rem;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  }
 
 img {
   max-width: 100%;
