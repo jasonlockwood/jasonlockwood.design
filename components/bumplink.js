@@ -3,7 +3,7 @@ import Space from "./spacing";
 import Link from "next/link";
 import { theme } from "../styles/theme";
 
-const BumpLink = styled.section`
+const BumpLink = styled.div`
   a {
     &:hover {
       h2,
@@ -33,10 +33,10 @@ const BumpLink = styled.section`
 const BumpLinkComponent = ({ title, description }) => (
   <BumpLink>
     <Link href="/">
-      <a>
-        <h2>{title}</h2>
-        <Space tiny />
-        <p>{description}</p>
+      <a className="grid grid-cols-1 md:grid-cols-12">
+        <h2 className="col-span-1 lg:col-span-8">{title}</h2>
+        <Space className="col-span-1 lg:col-span-8" tiny />
+        <p className="col-span-1 lg:col-span-8">{description}</p>
       </a>
     </Link>
   </BumpLink>

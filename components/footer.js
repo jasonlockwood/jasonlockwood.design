@@ -3,7 +3,6 @@ import { theme } from "../styles/theme";
 import Space from "../components/spacing";
 
 const Wrapper = styled.footer`
-  padding: ${theme.space[3]};
   display: flex;
   color: ${theme.light.colors.shade_30};
   font-size: ${theme.fontSizes[0]};
@@ -38,7 +37,7 @@ const flex = styled.div`
 
 const Footer = () => (
   <Wrapper>
-    <Space standard />
+    <Space extra />
     <flex>
       <p>Let's build something together</p>
       <h1>Get in touch</h1>
@@ -67,7 +66,7 @@ const Footer = () => (
         Linkedin
       </a><span className="outlink">↗</span>
     </flex>
-    <Space standard />
+    <Space extra />
   </Wrapper>
 );
 

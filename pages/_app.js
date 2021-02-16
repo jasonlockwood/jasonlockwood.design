@@ -3,6 +3,7 @@ import Head from 'next/head'
 import GlobalStyle from '../styles/global'
 import { theme } from '../styles/theme'
 import { ThemeProvider } from 'styled-components'
+import "tailwindcss/tailwind.css";
 
 const name = "Jason Lockwood";
 export const siteTitle = "Jason Lockwood";
