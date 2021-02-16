@@ -37,8 +37,8 @@ const Hero = styled.div`
     }
 
     &:before {
-      height: 88px;
-      width: 88px;
+      height: 92px;
+      width: 92px;
       background: ${theme.light.colors.primary};
       border: 2px solid ${theme.light.colors.shade_90};
       border-radius: 100%;
@@ -50,8 +50,8 @@ const Hero = styled.div`
     }
 
     &:after {
-      height: 88px;
-      width: 88px;
+      height: 92px;
+      width: 92px;
       background: ${theme.light.colors.shade_10};
       border: 2px solid ${theme.light.colors.shade_90};
       border-radius: 100%;
@@ -90,16 +90,23 @@ const HeroComponent = () => (
     <h1>Jason Lockwood</h1>
     <h1 className="muted">Digital Product Design</h1>
     <Space standard />
-    <p>
-      I am a team player who takes pride in crafting impactful product
-      experiences that are pleasing to use. Passionate, therefore naturally
-      curious about all things design. Most recently, I put my craft & passion
-      to work at{" "}
-      <a target="_blank" href="http://www.informed.co" className="link-effect">
-        Informed.co
-      </a>
-      <span className="outlink">↗</span>
-    </p>
+    <div className="grid grid-cols-1 lg:grid-cols-12">
+      <p className="col-span-1 lg:col-span-8">
+        I am a team player who takes pride in crafting impactful product
+        experiences that are pleasing to use. Passionate, therefore naturally
+        curious about all things design. Most recently, I put my craft & passion
+        to work at{" "}
+        <a
+          target="_blank"
+          href="http://www.informed.co"
+          className="link-effect"
+        >
+          Informed.co
+        </a>
+        <span className="outlink">↗</span>
+      </p>
+    </div>
+
     <Space standard />
     <Link href="/about">
       <a>

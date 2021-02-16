@@ -19,49 +19,49 @@ export default function Home() {
         description="How I helped Appeagle; a growing startup company, transform into Informed.co. The most trusted and essential product for third party businesses on Amazon. "
       />
 
-      <Space standard />
+      <Space extra />
 
       <BumpLink
         title="Building a Design System"
         description="How I helped Appeagle; a growing startup company, transform into Informed.co. The most trusted and essential product for third party businesses on Amazon. "
       />
 
-      <Space standard />
+      <Space extra />
 
       <BumpLink
         title="Key User Actions : Dashboard"
         description="How I helped Appeagle; a growing startup company, transform into Informed.co. The most trusted and essential product for third party businesses on Amazon. "
       />
 
-      <Space standard />
+      <Space extra />
 
       <BumpLink
         title="Team Accounts"
         description="How I helped Appeagle; a growing startup company, transform into Informed.co. The most trusted and essential product for third party businesses on Amazon. "
       />
 
-      <Space standard />
+      <Space extra />
 
       <BumpLink
         title="Connect with Amazon"
         description="How I helped Appeagle; a growing startup company, transform into Informed.co. The most trusted and essential product for third party businesses on Amazon. "
       />
 
-      <Space standard />
+      <Space extra />
 
       <BumpLink
         title="Tagging System"
         description="How I helped Appeagle; a growing startup company, transform into Informed.co. The most trusted and essential product for third party businesses on Amazon. "
       />
 
-      <Space standard />
+      <Space extra />
 
       <BumpLink
         title="Defining Design Principles"
         description="How I helped Appeagle; a growing startup company, transform into Informed.co. The most trusted and essential product for third party businesses on Amazon. "
       />
 
-      <Space standard />
+      <Space extra />
 
       <hr />
       <Space extra />
@@ -73,21 +73,21 @@ export default function Home() {
         description="How I helped Appeagle; a growing startup company, transform into Informed.co. The most trusted and essential product for third party businesses on Amazon. "
       />
 
-      <Space standard />
+      <Space extra />
 
       <BumpLink
         title="Defining Design Principles"
         description="How I helped Appeagle; a growing startup company, transform into Informed.co. The most trusted and essential product for third party businesses on Amazon. "
       />
 
-      <Space standard />
+      <Space extra />
 
       <BumpLink
         title="Defining Design Principles"
         description="How I helped Appeagle; a growing startup company, transform into Informed.co. The most trusted and essential product for third party businesses on Amazon. "
       />
 
-      <Space standard />
+      <Space extra />
     </Layout>
   );
 }
