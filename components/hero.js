@@ -114,7 +114,7 @@ const HeroComponent = () => (
       </a>
     </Link>
 
-    <Link href="/">
+    <Link href="mailto:hello@jasonlockwood.design?subject=Reaching out from your website">
       <a>
         <Button secondary>Get in touch</Button>
       </a>
