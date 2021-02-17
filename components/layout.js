@@ -17,7 +17,7 @@ const Main = styled.main``;
 export default function Layout({ children }) {
   return (
     <>
-      <Wrapper>
+      <Wrapper className="px-4 lg:px-0">
         {/* <Navbar /> */}
 
         <Main>{children}</Main>
