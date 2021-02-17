@@ -31,12 +31,12 @@ const BumpLink = styled.div`
 `;
 
 const BumpLinkComponent = ({ title, description }) => (
-  <BumpLink>
+  <BumpLink className="max-w-screen-sm">
     <Link href="/">
-      <a className="grid grid-cols-1 md:grid-cols-12">
-        <h2 className="col-span-1 lg:col-span-8">{title}</h2>
-        <Space className="col-span-1 lg:col-span-8" tiny />
-        <p className="col-span-1 lg:col-span-8">{description}</p>
+      <a>
+        <h2>{title}</h2>
+        <Space tiny />
+        <p>{description}</p>
       </a>
     </Link>
   </BumpLink>

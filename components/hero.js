@@ -75,7 +75,7 @@ const Hero = styled.div`
 `;
 
 const HeroComponent = () => (
-  <Hero>
+  <Hero className="max-w-screen-sm">
     <Space extra />
     <div className="border">
       <Image
@@ -90,8 +90,8 @@ const HeroComponent = () => (
     <h1>Jason Lockwood</h1>
     <h1 className="muted">Digital Product Design</h1>
     <Space standard />
-    <div className="grid grid-cols-1 lg:grid-cols-12">
-      <p className="col-span-1 lg:col-span-8">
+    <div>
+      <p>
         I am a team player who takes pride in crafting impactful product
         experiences that are pleasing to use. Passionate, therefore naturally
         curious about all things design. Most recently, I put my craft & passion
