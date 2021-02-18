@@ -23,6 +23,12 @@ const Button = styled.button`
   cursor: pointer;
   transition: 0.2s ease-in-out;
   user-select: none;
+  justify-content: center;
+  width:100%;
+
+  @media ${theme.breakpoint.sm} {
+        width: inherit;
+    }
 
   :hover {
     ${(props) =>

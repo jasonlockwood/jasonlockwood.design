@@ -59,7 +59,7 @@ p{
 }
 
 h1 {
-    font-size: ${theme.fontSizes[5]};
+    font-size: ${theme.fontSizes[4]};
 
     @media ${theme.breakpoint.sm}{
       font-size: ${theme.fontSizes[6]};
