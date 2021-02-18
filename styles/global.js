@@ -16,7 +16,7 @@ body {
 
 * {
   border: 0px;
-  box-sizing: inherit;
+  box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   font-weight: inherit;
   margin: 0px;
