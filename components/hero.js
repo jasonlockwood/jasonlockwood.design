@@ -110,7 +110,7 @@ const HeroComponent = () => (
     <Space standard />
     <Link href="/about">
       <a>
-        <Button primary>Find out more</Button>
+        <Button primary className="mb-4 sm:mb-0">Find out more</Button>
       </a>
     </Link>
 
