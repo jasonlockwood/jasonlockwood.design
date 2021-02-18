@@ -59,14 +59,14 @@ p{
 }
 
 h1 {
-    font-size: ${theme.fontSizes[3]};
+    font-size: ${theme.fontSizes[5]};
 
     @media ${theme.breakpoint.sm}{
-      font-size: ${theme.fontSizes[4]};
+      font-size: ${theme.fontSizes[6]};
     }
 
     @media ${theme.breakpoint.md} {
-      font-size: ${theme.fontSizes[5]};
+      font-size: ${theme.fontSizes[8]};
     }
 
     @media ${theme.breakpoint.lg} {

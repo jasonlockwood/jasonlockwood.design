@@ -25,7 +25,7 @@ const Wrapper = styled.footer`
   }
 
   .m-link{
-      font-size: ${theme.fontSizes[3]};
+      font-size: ${theme.fontSizes[2]};
     }
 `;
 
@@ -38,9 +38,10 @@ const flex = styled.div`
 const Footer = () => (
   <Wrapper>
     <Space extra />
-    <flex>
+    <flex className="pr-8">
       <p>Let's build something together</p>
       <h1>Get in touch</h1>
+      <Space y8/>
     </flex>
 
     <flex>
@@ -65,8 +66,9 @@ const Footer = () => (
       <a href="//www.twitter.com/jlockwoodtweets" className="link-effect">
         Linkedin
       </a><span className="outlink">↗</span>
+      <Space y8/>
     </flex>
-    <Space extra />
+    <Space extra/>
   </Wrapper>
 );
 
