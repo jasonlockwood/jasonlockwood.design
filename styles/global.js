@@ -117,7 +117,7 @@ a, a > span {
     bottom: 0;
     width: 100%;
     height: 2px;
-    background: ${theme.light.colors.primary};
+    background: ${theme.light.colors.primary_hover};
     transform:  translateX(-100%);
     opacity: 0;
   }
