@@ -50,7 +50,7 @@ h1, h2, h3, h4 ,h5{
     display: flex;
 }
 
-p{
+p, li{
     font-family:  -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     letter-spacing: 0.2px;
@@ -80,6 +80,14 @@ h2 {
     @media ${theme.breakpoint.sm}{
       font-size: ${theme.fontSizes[5]};
     }
+}
+
+h3{
+  font-size: ${theme.fontSizes[2]};
+
+  @media ${theme.breakpoint.sm}{
+    font-size: ${theme.fontSizes[3]};
+  }
 }
 
 a, a > span {
@@ -135,6 +143,11 @@ img {
 hr{
   height:2px;
   background: ${theme.light.colors.shade_10}
+}
+
+.mono{
+  font-family: "SF Mono", SFMono-Regular, ui-monospace, monospace;
+  color: ${theme.light.colors.shade_30};
 }
 `;
 
