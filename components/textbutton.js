@@ -5,30 +5,55 @@ const TextButton = styled.button`
   margin: ${theme.space[3]} ${theme.space[0]};
   display: flex;
   color: ${theme.light.colors.shade_80};
-  font-size: ${theme.fontSizes[0]};
+  font-size: ${theme.fontSizes[2]};
   font-weight: ${theme.fontWeights.bold};
-  font-family: "SF Mono", SFMono-Regular, ui-monospace, monospace;
   cursor: pointer;
   transition: 0.2s ease-in-out;
   user-select: none;
   background: none;
 
-  &:after {
+  ${(props) =>
+    props.after &&
+    `
+    &:after {
     content: "→";
     position: relative;
     transition: transform 0.2s ease-in-out;
     left: 8px;
-    top: -4px;
+    top: -3px;
     color: ${theme.light.colors.primary};
-    font-size: ${theme.fontSizes[2]}
+    font-size: ${theme.fontSizes[3]};
   }
+  `}
+  
+
+  ${(props) =>
+    props.before &&
+    `
+    &:before {
+    content: "←";
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+    left: 0;
+    top: -3px;
+    margin-right:8px;
+    color: ${theme.light.colors.primary};
+    font-size: ${theme.fontSizes[3]};
+  }
+  `}
 
   &:hover{
-    color: ${theme.light.colors.primary};
+    color: ${theme.light.colors.primary_hover};
   }
 
   &:hover:after {
     transform: translateX(3px);
+    color: ${theme.light.colors.primary_hover};
+  }
+
+  &:hover:before {
+    transform: translateX(-3px);
+    color: ${theme.light.colors.primary_hover};
   }
 
   /* Remove default focus styles for mouse users ONLY if :focus-visible is supported on this platform. */
