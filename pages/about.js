@@ -19,7 +19,7 @@ export default function About() {
         <Space extra />
         <Link href="/">
           <a>
-            <TextButton>Return to main</TextButton>
+            <TextButton before>Return to main</TextButton>
           </a>
         </Link>
 
