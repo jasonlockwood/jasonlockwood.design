@@ -4,6 +4,7 @@ import { theme } from "../styles/theme";
 import Link from "next/link";
 import Space from "../components/spacing";
 import TextButton from "../components/textbutton";
+import Pagination from "../components/pagination";
 
 const Wrapper = styled.div`
   img {
@@ -147,6 +148,10 @@ export default function About() {
           </div>
         </div>
         <Space extra />
+        <Pagination
+        href="/about"
+        beforeText="Octopus's Garden"
+        afterText="Golden Slumbers"/>
       </Layout>
     </Wrapper>
   );
