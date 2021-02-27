@@ -4,6 +4,7 @@ import { theme } from "../styles/theme";
 import Link from "next/link";
 import Space from "../components/spacing";
 import TextButton from "../components/textbutton";
+import Pagination from "../components/pagination";
 
 const Wrapper = styled.div`
   img {
@@ -17,11 +18,9 @@ export default function About() {
     <Wrapper>
       <Layout>
         <Space extra />
-        <Link href="/">
-          <a>
-            <TextButton before>Return to main</TextButton>
-          </a>
-        </Link>
+ 
+            <TextButton before href='/' buttonText="Return to main"/>
+        
 
         <Space extra />
         <h2 className="max-w-screen-sm">👋</h2>
@@ -146,7 +145,15 @@ export default function About() {
             </div>
           </div>
         </div>
+
         <Space extra />
+
+        {/* <Space standard />
+        <div className="flex justify-between">
+          <TextButton before slug="/about" buttonText="Octopus's Garden" />
+          <TextButton after slug="/about" buttonText="Golden Slumbers" />
+        </div>
+        <Space standard /> */}
       </Layout>
     </Wrapper>
   );

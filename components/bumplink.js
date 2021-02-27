@@ -1,10 +1,9 @@
 import styled from "styled-components";
 import Space from "./spacing";
-import Link from "next/link";
 import { theme } from "../styles/theme";
 
-const BumpLink = styled.div`
-  a {
+const BumpLink = styled.a`
+  
     &:hover {
       h2,
       p {
@@ -16,7 +15,7 @@ const BumpLink = styled.div`
         }
       }
     }
-  }
+  
 
   h2 {
     &:after {
@@ -32,13 +31,9 @@ const BumpLink = styled.div`
 
 const BumpLinkComponent = ({ title, description }) => (
   <BumpLink className="max-w-screen-sm">
-    <Link href="/">
-      <a>
         <h2>{title}</h2>
         <Space tiny />
         <p>{description}</p>
-      </a>
-    </Link>
   </BumpLink>
 );
 

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styled from "styled-components";
 import { theme } from "../styles/theme";
 
@@ -19,10 +20,13 @@ const TextButton = styled.button`
     content: "→";
     position: relative;
     transition: transform 0.2s ease-in-out;
-    left: 8px;
-    top: -3px;
+    right: 0;
+    top: 4px;
+    margin-left:8px;
     color: ${theme.light.colors.primary};
     font-size: ${theme.fontSizes[3]};
+    line-height: 1rem;
+    padding-right: 8px;
   }
   `}
   
@@ -35,10 +39,12 @@ const TextButton = styled.button`
     position: relative;
     transition: transform 0.2s ease-in-out;
     left: 0;
-    top: -3px;
+    top: 4px;
     margin-right:8px;
     color: ${theme.light.colors.primary};
     font-size: ${theme.fontSizes[3]};
+    line-height: 1rem;
+    padding-left: 8px;
   }
   `}
 
@@ -62,4 +68,10 @@ const TextButton = styled.button`
   }
 `;
 
-export default TextButton;
+const TextButtonComponent = ({href, before, after, buttonText }) => (
+  <Link passhref href={href}><a><TextButton before={before} after={after}>{buttonText}</TextButton></a></Link>
+  
+
+);
+
+export default TextButtonComponent;
