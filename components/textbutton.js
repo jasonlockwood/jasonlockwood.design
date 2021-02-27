@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styled from "styled-components";
 import { theme } from "../styles/theme";
 
@@ -67,4 +68,10 @@ const TextButton = styled.button`
   }
 `;
 
-export default TextButton;
+const TextButtonComponent = ({href, before, after, buttonText }) => (
+  <Link passhref href={href}><a><TextButton before={before} after={after}>{buttonText}</TextButton></a></Link>
+  
+
+);
+
+export default TextButtonComponent;

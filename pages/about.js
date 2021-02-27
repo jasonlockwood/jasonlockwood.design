@@ -18,11 +18,9 @@ export default function About() {
     <Wrapper>
       <Layout>
         <Space extra />
-        <Link href="/">
-          <a>
-            <TextButton before>Return to main</TextButton>
-          </a>
-        </Link>
+ 
+            <TextButton before href='/' buttonText="Return to main"/>
+        
 
         <Space extra />
         <h2 className="max-w-screen-sm">👋</h2>
@@ -147,11 +145,15 @@ export default function About() {
             </div>
           </div>
         </div>
+
         <Space extra />
-        <Pagination
-        href="/about"
-        beforeText="Octopus's Garden"
-        afterText="Golden Slumbers"/>
+
+        {/* <Space standard />
+        <div className="flex justify-between">
+          <TextButton before slug="/about" buttonText="Octopus's Garden" />
+          <TextButton after slug="/about" buttonText="Golden Slumbers" />
+        </div>
+        <Space standard /> */}
       </Layout>
     </Wrapper>
   );
