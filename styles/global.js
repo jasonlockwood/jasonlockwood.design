@@ -56,6 +56,7 @@ p, li{
     letter-spacing: 0.2px;
     font-weight: 500;
     color: ${theme.light.colors.shade_60};
+    font-size: ${theme.fontSizes[2]};
 }
 
 h1 {

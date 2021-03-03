@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   -webkit-box-pack: start;
   height: 100%;
-  max-width: 968px;
+  max-width: 760px;
   margin: auto;
 `;
 

@@ -75,7 +75,7 @@ const Hero = styled.div`
 `;
 
 const HeroComponent = () => (
-  <Hero className="max-w-screen-sm">
+  <Hero>
     <Space extra />
     <div className="border">
       <Image
