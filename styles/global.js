@@ -55,7 +55,7 @@ p, li{
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     letter-spacing: 0.2px;
     font-weight: 500;
-    color: ${theme.light.colors.shade_60};
+    color: ${theme.light.colors.shade_80};
     font-size: ${theme.fontSizes[2]};
 }
 

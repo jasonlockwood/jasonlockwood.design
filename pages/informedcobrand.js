@@ -1,86 +1,77 @@
 import Layout, { siteTitle } from "../components/layout";
 import Space from "../components/spacing";
 import Label from "../components/label";
-import BumpLink from "../components/bumplink";
 import TextButton from "../components/textbutton";
-import Link from "next/link";
+import Button from "../components/button";
 
 export default function Home() {
   return (
     <Layout>
       <Space extra />
       <TextButton before href="/" buttonText="Return to main" />
+
       <Space extra />
       <h1>Informed.co Branding</h1>
+
       <Space tiny />
       <p>
-        How I helped Appeagle; a growing startup company, transform into
-        Informed.co. The most trusted and essential product for third party
-        businesses on Amazon.
+        A new brand identity for the competitive pricing platform that is transforming how online businesses succeed.
       </p>
+
       <Space extra />
-      {/* <img src="/images/projects/brand/Logo.svg" />
-      <Space tiny /> */}
       <img src="/images/projects/brand/Icon.svg" />
+      <Space tiny/>
+      <img src="/images/projects/brand/logo-dark.svg" />
       <Space tiny />
+      <img src="/images/projects/brand/Before&After.svg" />
       
-      <div className="grid grid-cols-2 gap-4">
+      {/* <div className="grid grid-cols-2 gap-4">
+        <img src="/images/projects/brand/logo-dark.svg" />
+        <img src="/images/projects/brand/logo-light.svg" />
+      </div> */}
+
+      <Space standard />
+
+        <p>
+        Informed is a competitive pricing platform that helps online businesses drive profits using automation, smart algorithms, and actionable insights. The platform services thousands of online businesses worldwide who rely on Informed to guide and execute profitable business strategies. I have collaborated with Informed leadership to create a new brand identity that positions the company as a trusted industry leader.
+        </p>
+
+        <Space tiny />
+        <p>
+        Formerly as Appeagle, the company had experienced rapid growth as online marketplaces boomed. To secure a growth path for the future, the company introduced a bold vision for a suite of new data-driven services that would help sellers grow their business and drive new revenue streams for the company. To usher in this bold new vision for the future, Appeagle co-founders decided to shed its start-up brand in favor of a more polished and professional brand that would reflect its vision to empower businesses with more robust and data-driven services.
+        </p>
+
+        <Space extra />
+      
+        <img src="/images/projects/brand/Deck.svg" />
+        <Space tiny />
+        <img src="/images/projects/brand/Opening.svg" />
+        <Space tiny />
+        <div className="grid grid-cols-2 gap-4">
+        <img src="/images/projects/brand/shirt.svg" />
         <img src="/images/projects/brand/Website.svg" />
-        <img src="/images/projects/brand/Shirt.svg" />
       </div>
 
-      <Space extra />
-      <Label>Introduction</Label>
-      <Space extra />
-      <h2>Why change to Informed.co?</h2>
-      <Space tiny />
-      <div>
-        <p>
-          A shift had occurred in online marketplace selling. Once a competitive
-          edge for only the savviest online sellers, automated price management
-          had become essential tool for third party sellers. Even Amazon
-          recognized this necessity and launched its proprietary{" "}
-          <a
-            target="_blank"
-            href="https://sellercentral.amazon.com/gp/help/external/help.html?itemID=201994820&language=en_US&ref=efph_201994820_cont_62551"
-            className="link-effect"
-          >
-            automated pricing feature
-          </a>
-          <span className="outlink">↗</span> for sellers in 2016.
-        </p>
-        <Space tiny />
-
-        <p>
-          As platforms and fulfillment services became more accessible,
-          marketplaces became saturated with new merchants from all over the
-          world. To remain successful, sellers needed more. Appeagle customers
-          were turning to data and insights to grow their bottom line.
-          Recognizing this progression, Appeagle had to evolve in order to
-          ensure its future as an essential product for third party online
-          sellers.
-        </p>
-        <Space tiny />
-        <img className="" src="/images/projects/brand/Before&After.svg" />
         <Space tiny />
         <p>
-          The business owners resolved to expand the company's core offering by
+          The leadership group resolved to expand the company's core offering by
           introducing a suite of new data driven services that would both, help
           sellers grow their business and open up new revenue streams for the
           company.
         </p>
-        <Space tiny />
 
+        <Space tiny />
         <p>
           To support this expansion, the business needed to shed it's old
           start-up brand, Appeagle, for a more professional brand that would
           support the business goals shift to a broader and more robust
           services.
         </p>
+
         <Space tiny />
-      </div>
+
       <Space extra />
-      
+
       <Space extra />
       <Label>Process</Label>
       <Space standard />
@@ -101,7 +92,7 @@ export default function Home() {
         Informed.co.
       </p>
       <Space extra />
-      <img className="" src="/images/projects/brand/Deck.svg" />
+      <img src="/images/projects/brand/Deck.svg" />
       <Space extra />
       <h2>Defining our intent</h2>
       <Space tiny />
