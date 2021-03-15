@@ -2,7 +2,6 @@ import Layout, { siteTitle } from "../components/layout";
 import Space from "../components/spacing";
 import Label from "../components/label";
 import TextButton from "../components/textbutton";
-import Button from "../components/button";
 
 export default function Home() {
   return (
@@ -25,10 +24,6 @@ export default function Home() {
       <Space tiny />
       <img src="/images/projects/brand/Before&After.svg" />
       
-      {/* <div className="grid grid-cols-2 gap-4">
-        <img src="/images/projects/brand/logo-dark.svg" />
-        <img src="/images/projects/brand/logo-light.svg" />
-      </div> */}
 
       <Space standard />
 
