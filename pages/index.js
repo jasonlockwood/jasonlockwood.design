@@ -15,7 +15,7 @@ export default function Home() {
       <Label>Projects</Label>
       <Space extra />
 
-      <Link href="/">
+      <Link href="/informedcobrand">
         <a>
           <BumpLink
             title="Informed.co Brand"
