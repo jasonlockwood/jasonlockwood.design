@@ -194,15 +194,15 @@ const Nav = () => {
       </div>
 
       <motion.div className={`page-links ${isActive ? "" : "is-active"}`}>
-        <Link href="/about">
-          <a className={router.pathname == "/about" ? "active" : ""}>About</a>
+        <Link href="/">
+          <a className={router.pathname == "/" ? "active" : ""}>Work</a>
         </Link>
         <Link href="/about">
-          <a className={router.pathname == "/casestudies" ? "active" : ""}>
-            Case Studies
+          <a className={router.pathname == "/about" ? "active" : ""}>
+            About
           </a>
         </Link>
-        <Link href="/about">
+        <Link href="/articles">
           <a className={router.pathname == "/articles" ? "active" : ""}>
             Articles
           </a>

@@ -12,6 +12,7 @@ body {
   line-height: ${theme.lineHeights.body};
   width: 100%;
   height: 100%;
+  
 }
 
 * {
@@ -137,7 +138,7 @@ span.outlink {
   }
 
 img {
-  max-width: 100%;
+  width: 100%;
   display: block;
 }
 

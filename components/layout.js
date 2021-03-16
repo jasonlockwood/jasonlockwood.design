@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   -webkit-box-pack: start;
   height: 100%;
-  max-width: 760px;
+  max-width: 940px;
   margin: auto;
 `;
 
@@ -18,7 +18,7 @@ export default function Layout({ children }) {
   return (
     <>
       <Wrapper className="px-4 lg:px-0">
-        {/* <Navbar /> */}
+         <Navbar />
 
         <Main>{children}</Main>
         

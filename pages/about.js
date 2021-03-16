@@ -18,11 +18,6 @@ export default function About() {
     <Wrapper>
       <Layout>
         <Space extra />
- 
-            <TextButton before href='/' buttonText="Return to main"/>
-        
-
-        <Space extra />
         <h2 className="max-w-screen-sm">👋</h2>
         <Space standard />
         <p className="max-w-screen-sm">
