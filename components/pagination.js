@@ -11,14 +11,17 @@ const Wrapper = styled.div`
   background: rgba(255, 255, 255, 0.75);
   backdrop-filter: saturate(180%) blur(20px);
   border-top: 1px solid ${theme.light.colors.shade_10};
-  margin: 0 16px;
+  padding: 0 16px;
+  color: ${theme.light.colors.shade_80};
+  font-size: ${theme.fontSizes[2]}
+
 `;
 
 const Pagination = ({hrefBefore, hrefAfter, beforeText, afterText, currentProject}) => (
   <Wrapper>
 
     <TextButton href={hrefBefore} before buttonText={beforeText} />
-    <h3>{currentProject}</h3>
+    {currentProject}
     <TextButton href={hrefAfter} after buttonText={afterText} /> 
 
   </Wrapper>

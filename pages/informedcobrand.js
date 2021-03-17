@@ -4,10 +4,13 @@ import Label from "../components/label";
 import TextButton from "../components/textbutton";
 import Headroom from "react-headroom";
 import Pagination from "../components/pagination";
+import ProjectDetails from "../components/projectdetails";
 
 export default function Home() {
   return (
     <Layout>
+      <Space extra />
+
       <Space extra />
       <h1>Informed.co Branding</h1>
 
@@ -19,7 +22,38 @@ export default function Home() {
 
       <Space extra />
       <img src="/images/projects/brand/Icon.svg" />
-      <Space tiny />
+      <Space extra />
+      <div className="grid grid-flow-col gap-24 auto-cols-max">
+        <ProjectDetails
+          listTitle="My Role"
+          listItem1="Brand Identity"
+          listItem2="Brand Strategy"
+          listItem3="Brand Guidelines"
+          listItem4="Prototyping"
+          listItem5="UI/UX Design"
+        />
+
+        <ProjectDetails
+          listTitle="Team Members"
+          listItem1="Myself"
+          listItem2="Leadership Group"
+          listItem3="Design Team Support"
+        />
+
+        <ProjectDetails
+          listTitle="Tools Used"
+          listItem1="Adobe Illustrator"
+          listItem2="Adobe Photoshop"
+          listItem3="Slides"
+          listItem4="Sketch"
+          listItem5="HTML/CSS/JS"
+          
+
+        />
+
+        <ProjectDetails listTitle="Timeline" listItem1="8 weeks" />
+      </div>
+      <Space extra />
       <img src="/images/projects/brand/logo-dark.svg" />
       <Space tiny />
       <img src="/images/projects/brand/Before&After.svg" />
@@ -115,20 +149,17 @@ export default function Home() {
         grow their businesses and achieve their goals. Our new brand name;
         Informed.co.
       </p>
-
-      <Headroom
-      disableInlineStyles
-      upTolerance={0}
-      downTolerance={1}
-      >
-        <Pagination
-          currentProject="Informed.co"
-          hrefBefore="/about"
-          hrefAfter="/"
-          beforeText="Previous"
-          afterText="Next"
-        />
-      </Headroom>
+      <div id="headroomContainer">
+        <Headroom disableInlineStyles upTolerance={0} downTolerance={1}>
+          <Pagination
+            currentProject="Informed.co"
+            hrefBefore="/about"
+            hrefAfter="/"
+            beforeText=""
+            afterText=""
+          />
+        </Headroom>
+      </div>
     </Layout>
   );
 }

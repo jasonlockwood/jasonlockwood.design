@@ -231,6 +231,7 @@ const Nav = () => {
 const Header = () => {
   return (
     <Headroom
+    wrapperStyle={{ height: 'fit-content' }}
     style={{
       webkitTransition: 'all .2s ease-in-out',
       mozTransition: 'all .2s ease-in-out',
