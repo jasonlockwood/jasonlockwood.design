@@ -78,7 +78,6 @@ const Hero = styled.div`
 const HeroComponent = () => (
   <Hero>
     <Space extra />
-    <Space extra />
     <div className="border">
       <Image
         src="/images/me.jpg"

@@ -114,7 +114,7 @@ export default function About() {
             </p>
           </div>
           <div className="col-span-full max-w-screen-sm lg:col-span-4">
-            <div clasName="col-span-6 md:col-span-4">
+            <div className="col-span-6 md:col-span-4">
               <h3>Education</h3>
               <Space tiny />
               <p>New York Institute of Technology</p>
