@@ -152,6 +152,29 @@ hr{
   font-family: "SF Mono", SFMono-Regular, ui-monospace, monospace;
   color: ${theme.light.colors.shade_30};
 }
+
+.headroom {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-Index: 1;
+}
+.headroom--unfixed {
+  position: relative;
+  transform: translateY(0);
+}
+.headroom--scrolled {
+  transition: transform 200ms ease-in-out;
+}
+.headroom--unpinned {
+  position: fixed;
+  transform: translateY(0%);
+}
+.headroom--pinned {
+  position: fixed;
+  transform: translateY(100%);
+}
+
 `;
 
 export default GlobalStyle;
