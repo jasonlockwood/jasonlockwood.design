@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { theme } from "../styles/theme";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import Headroom from "react-headroom";
 
 const Navbar = styled.nav`
   display: flex;
@@ -12,13 +13,12 @@ const Navbar = styled.nav`
   width: 100%;
   background: rgba(255, 255, 255, 0.75);
   backdrop-filter: unset;
-  position: fixed;
   z-index: 9999;
   border-bottom: 1px solid ${theme.light.colors.shade_10};
 
   @media ${theme.breakpoint.sm} {
-    backdrop-filter: saturate(180%) blur(20px);;
-    }
+    backdrop-filter: saturate(180%) blur(20px);
+  }
 
   .name {
     color: ${theme.light.colors.shade_100};
@@ -201,7 +201,7 @@ const Nav = () => {
         </div>
 
         <motion.div className={`page-links ${isActive ? "" : "is-active"}`}>
-          <Link href="/#Work">
+          <Link href="/">
             <a className={router.pathname == "/" ? "active" : ""}>Work</a>
           </Link>
           <Link href="/about">
@@ -226,9 +226,18 @@ const Nav = () => {
 
 const Header = () => {
   return (
-    <Navbar>
-      <Nav />
-    </Navbar>
+    <Headroom 
+    upTolerance={2}
+    style={{
+      webkitTransition: 'all .5s ease-in-out',
+      mozTransition: 'all .5s ease-in-out',
+      oTransition: 'all .5s ease-in-out',
+      transition: 'all .5s ease-in-out'
+    }}>
+      <Navbar>
+        <Nav />
+      </Navbar>
+    </Headroom>
   );
 };
 
