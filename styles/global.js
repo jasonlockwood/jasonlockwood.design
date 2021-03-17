@@ -153,7 +153,8 @@ hr{
   color: ${theme.light.colors.shade_30};
 }
 
-.headroom {
+#headroomContainer{
+  .headroom {
   bottom: 0;
   left: 0;
   right: 0;
@@ -174,7 +175,7 @@ hr{
   position: fixed;
   transform: translateY(100%);
 }
-
+}
 `;
 
 export default GlobalStyle;
