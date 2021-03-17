@@ -229,10 +229,10 @@ const Header = () => {
     <Headroom 
     upTolerance={2}
     style={{
-      webkitTransition: 'all .5s ease-in-out',
-      mozTransition: 'all .5s ease-in-out',
-      oTransition: 'all .5s ease-in-out',
-      transition: 'all .5s ease-in-out'
+      webkitTransition: 'all .2s ease-in-out',
+      mozTransition: 'all .2s ease-in-out',
+      oTransition: 'all .2s ease-in-out',
+      transition: 'all .2s ease-in-out'
     }}>
       <Navbar>
         <Nav />
