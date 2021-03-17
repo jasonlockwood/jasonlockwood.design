@@ -9,6 +9,8 @@ const Wrapper = styled.footer`
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
+  max-width: 940px;
+  margin: auto;
 
   a {
     color: ${theme.light.colors.shade_60};

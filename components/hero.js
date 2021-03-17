@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Button from "./button";
+import TextButton from "./textbutton";
 import Space from "./spacing";
 import Link from "next/link";
 import Image from "next/image";
@@ -88,14 +89,13 @@ const HeroComponent = () => (
     </div>
     <Space standard />
     <h1>Jason Lockwood</h1>
-    <h1 className="muted">Digital Product Design</h1>
+    <h1 className="muted">Digital Product Designer</h1>
     <Space standard />
     <div>
       <p>
-        I am a team player who takes pride in crafting impactful product
-        experiences that are pleasing to use. Passionate, therefore naturally
-        curious about all things design. Most recently, I put my craft & passion
-        to work at{" "}
+        Hello! I am Jason, a Product Designer who enjoys writing code. I am a design generalist at my core but I am specifically interested in design systems and how design and engineering can work together to obtain results.</p>
+        <Space tiny/>
+        <p>I am currently looking for my next opportunity to craft impactful experiences. Most recently, I designed and coded user facing experiences as Senior Product Designer at{" "}
         <a
           target="_blank"
           href="http://www.informed.co"
@@ -105,6 +105,8 @@ const HeroComponent = () => (
         </a>
         <span className="outlink">↗</span>
       </p>
+
+      <p></p>
     </div>
 
     <Space standard />
@@ -119,6 +121,13 @@ const HeroComponent = () => (
         <Button secondary>Get in touch</Button>
       </a>
     </Link>
+
+    {/* <TextButton 
+      href="/about"
+      after="after"
+      buttonText="Learn more about me"/> */}
+    
+    <Space extra />
     <Space extra />
   </Hero>
 );

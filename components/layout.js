@@ -1,30 +1,36 @@
 import styled from "styled-components";
-import theme from "../styles/theme";
+import { theme } from "../styles/theme";
 import Navbar from "./navbar";
 import Footer from "./footer";
 
 const Wrapper = styled.div`
+  z-index:-9999;
+`;
+
+const Main = styled.main`
   display: flex;
   flex-direction: column;
   -webkit-box-pack: start;
   height: 100%;
-  max-width: 760px;
+  max-width: 940px;
   margin: auto;
-`;
 
-const Main = styled.main``;
+  @media ${theme.breakpoint.sm} {
+      padding-top: 54px;
+    }
+  
+`;
 
 export default function Layout({ children }) {
   return (
     <>
-      <Wrapper className="px-4 lg:px-0">
-        {/* <Navbar /> */}
+      <Wrapper>
+        <Navbar />
 
-        <Main>{children}</Main>
-        
+        <Main className="px-4 lg:px-0">{children}</Main>
 
-        <hr/>
-        <Footer />
+        {/* <hr />
+        <Footer /> */}
       </Wrapper>
     </>
   );

@@ -12,6 +12,7 @@ body {
   line-height: ${theme.lineHeights.body};
   width: 100%;
   height: 100%;
+  
 }
 
 * {
@@ -24,6 +25,7 @@ body {
   text-decoration: none;
   text-rendering: optimizelegibility;
   appearance: none;
+  scroll-behavior: smooth;
 
   ::selection {
     background-color: ${theme.light.colors.primary};
@@ -137,7 +139,7 @@ span.outlink {
   }
 
 img {
-  max-width: 100%;
+  width: 100%;
   display: block;
 }
 

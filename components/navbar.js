@@ -3,57 +3,68 @@ import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { theme } from "../styles/theme";
 import styled from "styled-components";
-import { motion } from "framer-motion"
-
-
+import { motion } from "framer-motion";
+import Headroom from "react-headroom";
 
 const Navbar = styled.nav`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
-  max-width: 1200px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: unset;
+  z-index: 9999;
+  border-bottom: 1px solid ${theme.light.colors.shade_10};
+
+  @media ${theme.breakpoint.sm} {
+    backdrop-filter: saturate(180%) blur(20px);
+  }
 
   .name {
     color: ${theme.light.colors.shade_100};
     font-weight: ${theme.fontWeights.bold};
     padding: 0;
     margin: ${theme.space[3]};
-    line-height:1.375;
+    line-height: 1.375;
   }
 
   a {
-    padding: 0 ${theme.space[3]};
+    padding: ${theme.space[2]} ${theme.space[7]};
     color: ${theme.light.colors.shade_60};
     font-weight: ${theme.fontWeights.medium};
     text-decoration: none;
+    transition: 0.2s ease-in-out;
+    border-radius: ${theme.space[2]};
   }
 
   a:hover {
     color: ${theme.light.colors.shade_100};
-    transition: 0.2s ease-in-out;
+
+    @media ${theme.breakpoint.sm} {
+      background-color: ${theme.light.colors.shade_10};
+    }
   }
 
   a.active {
-    color: ${theme.light.colors.shade_10};
+    color: ${theme.light.colors.primary};
     cursor: default;
   }
 `;
 
 const StyledNav = styled.div`
-  margin: ${theme.space[3]};
+  margin: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 
   .page-links {
     display: none;
-    margin: ${theme.space[3]} 0;
     flex-direction: row;
 
     @media ${theme.breakpoint.sm} {
       display: flex;
+      margin: ${theme.space[2]};
     }
   }
 
@@ -68,49 +79,46 @@ const StyledNav = styled.div`
     justify-content: center;
     align-items: center;
     z-index: 2;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    margin:0;
-    
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
 
     @media ${theme.breakpoint.sm} {
       flex-basis: unset;
       flex-direction: row;
       background: none;
       position: inherit;
-      height:unset;
-      width:unset;
-
+      height: unset;
+      width: unset;
     }
 
-    a{
-      font-size:48px;
+    a {
+      font-size: 48px;
       color: ${theme.light.colors.background};
 
       @media ${theme.breakpoint.sm} {
-      font-size: unset;
-      color: ${theme.light.colors.shade_60};
-
+        font-size: unset;
+        color: ${theme.light.colors.shade_60};
+      }
     }
-    }
 
-    a:hover{
+    a:hover {
       color: ${theme.light.colors.shade_30};
     }
   }
 
   .icon {
-    width: ${theme.space[4]};
-    height: ${theme.space[4]};
+    width: ${theme.space[5]};
+    height: ${theme.space[5]};
     margin: ${theme.space[2]};
-    padding: ${theme.space[2]};
+    padding: 5px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.75);
     backdrop-filter: saturate(180%) blur(20px);
     position: fixed;
-    right: 16px;
+    right: 8px;
     top: 16px;
     z-index: 3;
 
@@ -129,13 +137,13 @@ const StyledNav = styled.div`
     transition: all 0.3s ease-in-out;
   }
 
-  @media (hover: hover){
-  .icon:hover {
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
-    background: rgba(235, 236, 235, 0.5);
+  @media (hover: hover) {
+    .icon:hover {
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+      background: rgba(235, 236, 235, 0.5);
+    }
   }
-}
 
   .icon.is-active .line:nth-child(1) {
     -webkit-transform: translateY(4px) rotate(45deg);
@@ -183,33 +191,29 @@ const Nav = () => {
 
   return (
     <>
-    <StyledNav>
-      <Link href="/">
-        <a className="name">👽</a>
-      </Link>
+      <StyledNav>
+        <div
+          onClick={openNav}
+          className={`icon ${isActive ? "" : "is-active"}`}
+        >
+          <span className="line"></span>
+          <span className="line"></span>
+        </div>
 
-      <div onClick={openNav} className={`icon ${isActive ? "" : "is-active"}`}>
-        <span className="line"></span>
-        <span className="line"></span>
-      </div>
-
-      <motion.div className={`page-links ${isActive ? "" : "is-active"}`}>
-        <Link href="/about">
-          <a className={router.pathname == "/about" ? "active" : ""}>About</a>
-        </Link>
-        <Link href="/about">
-          <a className={router.pathname == "/casestudies" ? "active" : ""}>
-            Case Studies
-          </a>
-        </Link>
-        <Link href="/about">
-          <a className={router.pathname == "/articles" ? "active" : ""}>
-            Articles
-          </a>
-        </Link>
-      </motion.div>
-    </StyledNav>
-
+        <motion.div className={`page-links ${isActive ? "" : "is-active"}`}>
+          <Link href="/">
+            <a className={router.pathname == "/" ? "active" : ""}>Work</a>
+          </Link>
+          <Link href="/about">
+            <a className={router.pathname == "/about" ? "active" : ""}>About</a>
+          </Link>
+          <Link href="/articles">
+            <a className={router.pathname == "/articles" ? "active" : ""}>
+              Articles
+            </a>
+          </Link>
+        </motion.div>
+      </StyledNav>
     </>
   );
 };
@@ -218,15 +222,22 @@ const Nav = () => {
 
 // ====================  BEGIN NavMenu Component  ====================
 
-
-
 // ====================  BEGIN Header Component  ====================
 
 const Header = () => {
   return (
+    <Headroom 
+    upTolerance={2}
+    style={{
+      webkitTransition: 'all .2s ease-in-out',
+      mozTransition: 'all .2s ease-in-out',
+      oTransition: 'all .2s ease-in-out',
+      transition: 'all .2s ease-in-out'
+    }}>
       <Navbar>
         <Nav />
       </Navbar>
+    </Headroom>
   );
 };
 
