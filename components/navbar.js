@@ -35,6 +35,7 @@ const Navbar = styled.nav`
     text-decoration: none;
     transition: 0.2s ease-in-out;
     border-radius: ${theme.space[2]};
+    
   }
 
   a:hover {
@@ -201,8 +202,11 @@ const Nav = () => {
         </div>
 
         <motion.div className={`page-links ${isActive ? "" : "is-active"}`}>
-          <Link href="/">
-            <a className={router.pathname == "/" ? "active" : ""}>Work</a>
+        <Link href="/">
+            <a className={router.pathname == "/" ? "active" : ""}>Home</a>
+          </Link>
+          <Link href="/#Work">
+            <a className={router.pathname == "/#Work" ? "active" : ""}>Work</a>
           </Link>
           <Link href="/about">
             <a className={router.pathname == "/about" ? "active" : ""}>About</a>
@@ -226,8 +230,7 @@ const Nav = () => {
 
 const Header = () => {
   return (
-    <Headroom 
-    upTolerance={2}
+    <Headroom
     style={{
       webkitTransition: 'all .2s ease-in-out',
       mozTransition: 'all .2s ease-in-out',
