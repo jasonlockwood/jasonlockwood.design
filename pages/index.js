@@ -9,12 +9,11 @@ export default function Home() {
   return (
     <Layout>
       <Hero />
-
+      
       <hr />
-      <Space extra />
+      <Space extra /><div id="Work"></div>
       <Label>Selected work</Label>
       <Space extra />
-      
 
       <Link href="/informedcobrand">
         <a>
@@ -57,6 +56,7 @@ export default function Home() {
       </Link>
 
       <Space extra />
+      <Space extra />
 
       <Link href="/">
         <a>
@@ -70,6 +70,7 @@ export default function Home() {
       </Link>
 
       <Space extra />
+      <Space extra />
 
       <Link href="/">
         <a>
@@ -82,6 +83,7 @@ export default function Home() {
         </a>
       </Link>
 
+      <Space extra />
       <Space extra />
 
       <hr />
@@ -120,6 +122,7 @@ export default function Home() {
         </a>
       </Link>
 
+      <Space extra />
       <Space extra />
     </Layout>
   );

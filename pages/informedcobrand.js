@@ -6,8 +6,6 @@ import TextButton from "../components/textbutton";
 export default function Home() {
   return (
     <Layout>
-      <Space extra />
-      <TextButton before href="/" buttonText="Return to main" />
 
       <Space extra />
       <h1>Informed.co Branding</h1>

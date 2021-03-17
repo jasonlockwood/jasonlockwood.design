@@ -25,6 +25,7 @@ body {
   text-decoration: none;
   text-rendering: optimizelegibility;
   appearance: none;
+  scroll-behavior: smooth;
 
   ::selection {
     background-color: ${theme.light.colors.primary};
