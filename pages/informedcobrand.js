@@ -23,7 +23,7 @@ export default function Home() {
       <Space extra />
       <img src="/images/projects/brand/Icon.svg" />
       <Space extra />
-      <div className="grid grid-flow-col gap-24 auto-cols-max">
+      <div className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-24">
         <ProjectDetails
           listTitle="My Role"
           listItem1="Brand Identity"
