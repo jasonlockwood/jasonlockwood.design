@@ -16,21 +16,30 @@ export default function Home() {
 
       <Space tiny />
       <p>
-        A new brand identity for the competitive pricing platform that is
-        transforming how online businesses succeed.
+        A new identity for the competitive pricing platform that is transforming
+        how online businesses succeed.
       </p>
 
       <Space extra />
       <img src="/images/projects/brand/Icon.svg" />
       <Space extra />
+      <p>
+        Informed is a competitive pricing platform that helps drive profits
+        using automation, smart algorithms, and actionable insights. The
+        platform services thousands of online businesses worldwide who rely on
+        Informed to guide and execute competitive business strategies. I have
+        collaborated with Informed leadership to create a new brand identity
+        that positions the company as a trusted and performant industry leader.
+      </p>
+      <Space extra />
+
       <div className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-24">
         <ProjectDetails
           listTitle="My Role"
           listItem1="Brand Identity"
           listItem2="Brand Strategy"
           listItem3="Brand Guidelines"
-          listItem4="Prototyping"
-          listItem5="UI/UX Design"
+          listItem4="Interface Design"
         />
 
         <ProjectDetails
@@ -47,44 +56,62 @@ export default function Home() {
           listItem3="Slides"
           listItem4="Sketch"
           listItem5="HTML/CSS/JS"
-          
-
         />
 
         <ProjectDetails listTitle="Timeline" listItem1="8 weeks" />
       </div>
       <Space extra />
-      <img src="/images/projects/brand/logo-dark.svg" />
+      <Space extra />
+      <img src="/images/projects/brand/logo-light.svg" />
       <Space tiny />
+      <div className="grid grid-cols-2 gap-4">
+        <img src="/images/projects/brand/logo-dark.svg" />
+        <img src="/images/projects/brand/logo-knockout.gif" />
+      </div>
+
+      <Space extra />
+      <Space extra />
+      <div className="grid grid-cols-2 gap-4">
+        <h2 className="col-span-2 md:col-span-1">the challenge</h2>
+        <p>
+          Formerly as Appeagle, the company experienced rapid growth as online
+          marketplaces boomed. As marketplaces boomed, automated price
+          management was no longer an innovative edge, rather it became a
+          ubiquitous service. To secure a growth path for the future, the
+          company looked to expand its core offering. By introducing a suite of
+          new data driven services the company could drive new revenue streams
+          while offering customers innovative opportunities to further grow
+          their business. To usher in this bold new vision for the future,
+          Appeagle co-founders wished to shed their start-up brand in favor of a
+          more professional identity that would reflect its bold vision to
+          empower businesses with more robust and data driven services.
+        </p>
+      </div>
+      <Space extra />
+
       <img src="/images/projects/brand/Before&After.svg" />
 
-      <Space standard />
-
-      <p>
-        Informed is a competitive pricing platform that helps online businesses
-        drive profits using automation, smart algorithms, and actionable
-        insights. The platform services thousands of online businesses worldwide
-        who rely on Informed to guide and execute profitable business
-        strategies. I have collaborated with Informed leadership to create a new
-        brand identity that positions the company as a trusted industry leader.
-      </p>
-
-      <Space tiny />
-      <p>
-        Formerly as Appeagle, the company had experienced rapid growth as online
-        marketplaces boomed. To secure a growth path for the future, the company
-        introduced a bold vision for a suite of new data-driven services that
-        would help sellers grow their business and drive new revenue streams for
-        the company. To usher in this bold new vision for the future, Appeagle
-        co-founders decided to shed its start-up brand in favor of a more
-        polished and professional brand that would reflect its vision to empower
-        businesses with more robust and data-driven services.
-      </p>
+      <Space extra />
+      <Space extra />
+      <div className="grid grid-cols-2 gap-4">
+        <h2 className="col-span-2 md:col-span-1">the solution</h2>
+        <p>
+          A brand identity that would position Informed as the leading price management service for professional online businesses that want to leverage automation, data analysis and advanced reporting to achieve continued growth for their businesses.
+        </p>
+      </div>
+      <Space extra />
 
       <Space extra />
 
-      <img src="/images/projects/brand/Deck.svg" />
-      <Space tiny />
+      <img src="/images/projects/brand/Deck.png" />
+      <Space extra />
+      <div className="grid grid-cols-2 gap-4">
+        <h2 className="col-span-2 md:col-span-1">developing the strategy</h2>
+        <p>
+        We set out to develop brand strategy and positioning for Informed that highlights its commitment to helping online businesses grow with a data-driven approach. The company ideally services established and performant online businesses, although Informed is marketing to broad segments of business with a path in place to grow businesses into ideal customers. The branding had to speak to all of these segments. We developed a brand personality that is clean and smart, yet engaging and welcoming. This serves to build a sense of trust and professionalism that is universal to all levels of business.
+        </p>
+      </div>
+      <Space extra />
       <img src="/images/projects/brand/Opening.svg" />
       <Space tiny />
       <div className="grid grid-cols-2 gap-4">
@@ -112,43 +139,8 @@ export default function Home() {
       <Space extra />
 
       <Space extra />
-      <Label>Process</Label>
-      <Space standard />
-      <h2>Defining our intent</h2>
-      <Space tiny />
-      <p>
-        Our mission had always been about providing the best automated pricing
-        service to our customers so they could achieve their goals. However,
-        this was loosely defined and constantly evolving as Appeagle grew. We
-        had to take a hard look at our business and our values in order to carve
-        out a distinct path that we would follow as the business grew. We agreed
-        automation was not the key but just one of many levers to achieve
-        success. In order to truly help online sellers grow, we needed to keep
-        sellers informed so they can make the right decisions to achieve growth.
-        From this, our new mission and brand name was forged. Our new mission;
-        to inform and empower sellers with the data and insight to help them
-        grow their businesses and achieve their goals. Our new brand name;
-        Informed.co.
-      </p>
-      <Space extra />
-      <img src="/images/projects/brand/Deck.svg" />
-      <Space extra />
-      <h2>Defining our intent</h2>
-      <Space tiny />
-      <p>
-        Our mission had always been about providing the best automated pricing
-        service to our customers so they could achieve their goals. However,
-        this was loosely defined and constantly evolving as Appeagle grew. We
-        had to take a hard look at our business and our values in order to carve
-        out a distinct path that we would follow as the business grew. We agreed
-        automation was not the key but just one of many levers to achieve
-        success. In order to truly help online sellers grow, we needed to keep
-        sellers informed so they can make the right decisions to achieve growth.
-        From this, our new mission and brand name was forged. Our new mission;
-        to inform and empower sellers with the data and insight to help them
-        grow their businesses and achieve their goals. Our new brand name;
-        Informed.co.
-      </p>
+    
+     
       <div id="headroomContainer">
         <Headroom disableInlineStyles upTolerance={0} downTolerance={1}>
           <Pagination

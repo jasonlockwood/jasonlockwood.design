@@ -59,6 +59,7 @@ p, li{
     font-weight: 500;
     color: ${theme.light.colors.shade_80};
     font-size: ${theme.fontSizes[2]};
+    line-height: ${theme.lineHeights.body};
 }
 
 h1 {
