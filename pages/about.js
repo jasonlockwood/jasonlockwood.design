@@ -58,14 +58,41 @@ export default function About() {
         <Space extra />
         <div className="grid grid-cols-12 gap-8 ">
           <div className="col-span-full max-w-screen-sm lg:col-span-8">
-            <h3>Experience</h3>
+            <h2>Experience</h2>
             <Space standard />
             <p>
               <strong>Informed.co, Senior Product Designer</strong>
             </p>
             <p className="mono">2018 - 2020</p>
-            <p>Description goes here...</p>
+            <ul>
+              <li>
+                Led design on the comapny rebrand as Appeagle became Informed.co.
+                My duties involved contextualizing and documenting the brand definition, experience
+                principles, and design standards for the organization.
+                Documenting and evangelizing these rubrics ensured that the new
+                brand was appropriately interpreted through the teams' work.{" "}
+              </li>{" "}
+              <Space y8 />
+              <li>
+                Proactively established tools, processes, and practices that
+                helped improve the efficiency and effectiveness of teams'
+                output. This includes a foundational design system, a streamlined processes between design and engineering, and new collaborative rituals within the design team.
+              </li>{" "}
+              <Space y8 />
+              <li>
+                {" "}
+                Interviewed, onboarded, and mentored new team members as they
+                transitioned to successful individual contributors.
+              </li>{" "}
+              <Space y8 />
+              <li>
+                {" "}
+                Owned operational leadership to help facilitate the design
+                team's effectiveness.
+              </li>
+            </ul>
             <Space standard />
+
             <p>
               <strong>Informed.co / Appeagle, Product Designer</strong>
             </p>
@@ -78,7 +105,6 @@ export default function About() {
               significant increases in customer value.
             </p>
             <Space standard />
-
             <p>
               <strong>
                 Night Owl Interactive, Designer and Frontend Developer
@@ -91,7 +117,6 @@ export default function About() {
               developing online marketing solutions.
             </p>
             <Space standard />
-
             <p>
               <strong>Hanover Direct, Designer and Content Manager</strong>
             </p>
@@ -103,7 +128,6 @@ export default function About() {
               Demandware.
             </p>
             <Space standard />
-
             <p>
               <strong>PlanetConnect, Designer</strong>
             </p>
@@ -115,7 +139,7 @@ export default function About() {
           </div>
           <div className="col-span-full max-w-screen-sm lg:col-span-4">
             <div className="col-span-6 md:col-span-4">
-              <h3>Education</h3>
+              <h2>Education</h2>
               <Space tiny />
               <p>New York Institute of Technology</p>
               <p className="mono">2018 - 2020</p>
@@ -124,7 +148,7 @@ export default function About() {
             </div>
 
             <div clasName="col-span-6 md:col-span-4">
-              <h3>Skills</h3>
+              <h2>Skills</h2>
               <Space tiny />
               <ul>
                 <li>UI / UX Design</li>

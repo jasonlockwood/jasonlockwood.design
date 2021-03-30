@@ -15,10 +15,12 @@ const BumpLink = styled.div`
 
       &:after {
         transform: translateX(3px);
+        
       }
     }
     img {
       transform: translateY(-3px);
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
       
     }
   }
@@ -36,6 +38,7 @@ const BumpLink = styled.div`
   img {
     border-radius: 16px;
   }
+
 `;
 
 const BumpLinkComponent = ({ discipline, image, title, description }) => (

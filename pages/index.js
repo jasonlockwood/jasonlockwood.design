@@ -55,11 +55,11 @@ export default function Home() {
         </a>
       </Link>
 
-      <Space extra />
+      {/* <Space extra />
       <Space extra />
 
-      <Link href="/">
-        <a>
+      <Link href="#null">
+        <a className="wait">
           <BumpLink
             discipline="UX/UI Design, Frontend Development"
             image="images/projects/Teams.svg"
@@ -120,7 +120,7 @@ export default function Home() {
             description="How I helped Appeagle; a growing startup company, transform into Informed.co. The most trusted and essential product for third party businesses on Amazon. "
           />
         </a>
-      </Link>
+      </Link> */}
 
       <Space extra />
       <Space extra />

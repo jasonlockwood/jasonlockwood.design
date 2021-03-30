@@ -93,9 +93,9 @@ const HeroComponent = () => (
     <Space standard />
     <div>
       <p>
-        Hello! I am Jason, a Product Designer who enjoys writing code. I am a design generalist at my core but I am specifically interested in design systems and how design and engineering can work together to obtain results.</p>
+        Hello! I am Jason, as a product designer I exercise passion, grit, expertise and a collaborative spirit to craft meaningful experiences that delight.</p>
         <Space tiny/>
-        <p>I am currently looking for my next opportunity to craft impactful experiences. Most recently, I designed and coded user facing experiences as Senior Product Designer at{" "}
+        <p>Most recently, I worked at{" "}
         <a
           target="_blank"
           href="http://www.informed.co"
@@ -103,7 +103,8 @@ const HeroComponent = () => (
         >
           Informed.co
         </a>
-        <span className="outlink">↗</span>
+        <span className="outlink">↗</span>{" "}
+        where I designed and coded impactful user experiences, created the brand identity, and institutionalized a design system that improved consistency and results.
       </p>
 
       <p></p>
