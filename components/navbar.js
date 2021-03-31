@@ -224,9 +224,6 @@ const Nav = () => {
 
 // ====================  END Nav Component  ====================
 
-// ====================  BEGIN NavMenu Component  ====================
-
-// ====================  BEGIN Header Component  ====================
 
 const Header = () => {
   return (

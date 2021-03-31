@@ -5,6 +5,7 @@ import Link from "next/link";
 import Space from "../components/spacing";
 import TextButton from "../components/textbutton";
 import Pagination from "../components/pagination";
+import { SP } from "next/dist/next-server/lib/utils";
 
 const Wrapper = styled.div`
   img {
@@ -17,38 +18,9 @@ export default function About() {
   return (
     <Wrapper>
       <Layout>
-        <Space extra />
-        <h2 className="max-w-screen-sm">👋</h2>
-        <Space standard />
-        <p className="max-w-screen-sm">
-          I'm a product designer currently living in Hoboken.
-        </p>
-        <Space tiny />
-        <p className="max-w-screen-sm">
-          Most recently, I worked as Senior Product Designer at{" "}
-          <Link href="http://www.informed.co">
-            <a className="link-effect">Informed.co</a>
-          </Link>
-          . In my 5 years at Informed.co, I designed the brand identity, worked
-          across teams to design and code successful user experiences for the
-          web app, built a foundational design system to boost the acceleration
-          and quality of team output, shaped design processes, and learned a ton
-          from some really great people.
-        </p>
-        <Space tiny />
-        <p className="max-w-screen-sm">
-          Most recently, I worked as Senior Product Designer at. In my 5 years
-          at Informed.co, I designed the brand identity, worked across teams to
-          design and code successful user experiences for the web app, built a
-          foundational design system to boost the acceleration and quality of
-          team output, shaped design processes, and learned a ton from some
-          really great people.
-        </p>
-        <Space extra />
-
         <div className="border">
           <img
-            className="w-full sm:max-w-screen-sm"
+            className="w-full sm:max-w-screen-md"
             src="/images/About.png"
             alt="Profile Picture"
             priority="true"
@@ -56,16 +28,96 @@ export default function About() {
         </div>
 
         <Space extra />
+        <h2 className="max-w-screen-md">Hello! 👋 </h2>
+        <Space standard />
+        <p className="max-w-screen-md">
+          I am a seasoned product designer with deep roots in art & graphic
+          design.
+        </p>
+        <Space tiny />
+        <p className="max-w-screen-md">
+          With over ten years of experience in various design disciplines and
+          industries, my diverse path has allowed me to become a versatile and
+          well-rounded product designer.
+        </p>
+        <Space tiny />
+        <p className="max-w-screen-md">
+          Most recently, I worked at{" "}
+          <a
+            target="_blank"
+            href="http://www.informed.co"
+            className="link-effect"
+          >
+            Informed.co
+          </a>
+          <span className="outlink">↗</span> as a Senior Product Designer. The
+          Informed team was small and nimble. Being a part of a small team meant
+          taking on many responsibilities. Primarily, I practiced human-centered
+          methodology to design impactful user experiences and crafted interface
+          patterns in adherence to brand principles and usability guidelines.
+          But I also designed and developed the brand, institutionalized a
+          design system, and led design team operations, all while coding the
+          experiences that I was creating.
+        </p>
+        <Space tiny />
+        <p className="max-w-screen-md">
+          At Informed, I worked alongside incredibly talented individuals and
+          learned so much from them every day. Over time, I built influence
+          within the organization, which allowed me to impact product strategy
+          and create team processes that improved team output. These
+          opportunities allowed me to sharpen my literacy and understanding with
+          other parts of the organization.
+        </p>
+        <Space tiny />
+        <p className="max-w-screen-md">
+          Outside of my design world, you'll find me adventuring with my family,
+          kicking back with friends, camping, hiking, snowboarding, supporting
+          Liverpool Football Club, baking sourdough bread or trying out
+          something completely new and unusual. Life begins where your comfort
+          zone ends.
+        </p>
+        <Space extra />
+        <Space standard />
         <div className="grid grid-cols-12 gap-8 ">
           <div className="col-span-full max-w-screen-sm lg:col-span-8">
-            <h3>Experience</h3>
+            <h2>Experience</h2>
             <Space standard />
             <p>
               <strong>Informed.co, Senior Product Designer</strong>
             </p>
             <p className="mono">2018 - 2020</p>
-            <p>Description goes here...</p>
+            <ul>
+              <li>
+                Led design on the comapny rebrand as Appeagle became
+                Informed.co. My duties involved contextualizing and documenting
+                the brand definition, experience principles, and design
+                standards for the organization. Documenting and evangelizing
+                these rubrics ensured that the new brand was appropriately
+                interpreted through the teams' work.{" "}
+              </li>{" "}
+              <Space y8 />
+              <li>
+                Proactively established tools, processes, and practices that
+                helped improve the efficiency and effectiveness of teams'
+                output. This includes a foundational design system, a
+                streamlined processes between design and engineering, and new
+                collaborative rituals within the design team.
+              </li>{" "}
+              <Space y8 />
+              <li>
+                {" "}
+                Interviewed, onboarded, and mentored new team members as they
+                transitioned to successful individual contributors.
+              </li>{" "}
+              <Space y8 />
+              <li>
+                {" "}
+                Owned operational leadership to help facilitate the design
+                team's effectiveness.
+              </li>
+            </ul>
             <Space standard />
+
             <p>
               <strong>Informed.co / Appeagle, Product Designer</strong>
             </p>
@@ -78,7 +130,6 @@ export default function About() {
               significant increases in customer value.
             </p>
             <Space standard />
-
             <p>
               <strong>
                 Night Owl Interactive, Designer and Frontend Developer
@@ -91,7 +142,6 @@ export default function About() {
               developing online marketing solutions.
             </p>
             <Space standard />
-
             <p>
               <strong>Hanover Direct, Designer and Content Manager</strong>
             </p>
@@ -103,7 +153,6 @@ export default function About() {
               Demandware.
             </p>
             <Space standard />
-
             <p>
               <strong>PlanetConnect, Designer</strong>
             </p>
@@ -115,7 +164,7 @@ export default function About() {
           </div>
           <div className="col-span-full max-w-screen-sm lg:col-span-4">
             <div className="col-span-6 md:col-span-4">
-              <h3>Education</h3>
+              <h2>Education</h2>
               <Space tiny />
               <p>New York Institute of Technology</p>
               <p className="mono">2018 - 2020</p>
@@ -124,7 +173,7 @@ export default function About() {
             </div>
 
             <div clasName="col-span-6 md:col-span-4">
-              <h3>Skills</h3>
+              <h2>Skills</h2>
               <Space tiny />
               <ul>
                 <li>UI / UX Design</li>

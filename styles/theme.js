@@ -28,8 +28,8 @@ export const theme = {
       shade_30: "#B0B2B4",
       shade_10: "#EBECEB",
       background: "#FFFFFF",
-      primary: "#86C9A9",
-      primary_hover: "#9ADABC",
+      primary: "#6495ED",
+      primary_hover: "#75a6f9",
     },
   },
 
@@ -50,7 +50,7 @@ export const theme = {
     "0.75rem", // 0 <--12px
     "1rem", // 1 <--16px
     "1.125rem", // 2 <--18px
-    "1.5rem", // 3 <--24px
+    "1.25rem", // 3 <--24px
     "2rem", // 4 <--32px
     "2.25rem", // 5 <--36px
     "2.5rem", // 6 <--40px
@@ -69,7 +69,7 @@ export const theme = {
   },
 
   lineHeights: {
-    body: "1.4",
+    body: "1.6",
     heading: "1",
     code: "1.6",
   },

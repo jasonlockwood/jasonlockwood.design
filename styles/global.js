@@ -53,12 +53,13 @@ h1, h2, h3, h4 ,h5{
 }
 
 p, li{
-    font-family:  -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+    font-family:  'iA Writer Quattro S', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    letter-spacing: 0.2px;
+    letter-spacing: -0.2px;
     font-weight: 500;
     color: ${theme.light.colors.shade_80};
     font-size: ${theme.fontSizes[2]};
+    line-height: ${theme.lineHeights.body};
 }
 
 h1 {
@@ -151,6 +152,22 @@ hr{
 .mono{
   font-family: "SF Mono", SFMono-Regular, ui-monospace, monospace;
   color: ${theme.light.colors.shade_30};
+}
+
+.wait{
+  cursor: wait;
+
+  &:before{
+    opacity: 0;
+    content: " Blah ";
+  }
+
+  &:hover:before{
+
+    opacity: 1;
+    
+
+  }
 }
 
 #headroomContainer{
