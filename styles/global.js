@@ -157,18 +157,29 @@ hr{
 .wait{
   cursor: wait;
 
-  &:before{
-    opacity: 0;
-    content: " Blah ";
-  }
+}
 
-  &:hover:before{
+/* ========= REACT CAROUSEL STYLING ============  */
 
-    opacity: 1;
-    
+.carousel .slide .legend{
+  right:0;
+  left:0;
+  margin:auto;
+  width: fit-content;
+  background: rgba(0,0,0,.75);
+}
 
+.carousel.carousel-slider .control-arrow{
+
+  &:hover{
+    background:none;
   }
 }
+
+/* ========= REACT CAROUSEL STYLING ============  */
+
+
+/* ========= HEADROOM STYLING ============  */
 
 #headroomContainer{
   .headroom {
@@ -193,6 +204,9 @@ hr{
   transform: translateY(100%);
 }
 }
+
+/* ========= HEADROOM STYLING ============  */
+
 `;
 
 export default GlobalStyle;
