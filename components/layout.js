@@ -14,10 +14,6 @@ const Main = styled.main`
   height: 100%;
   max-width: 940px;
   margin: auto;
-
-  @media ${theme.breakpoint.sm} {
-      padding-top: 54px;
-    }
   
 `;
 
@@ -29,8 +25,8 @@ export default function Layout({ children }) {
 
         <Main className="px-4 lg:px-0">{children}</Main>
 
-        {/* <hr />
-        <Footer /> */}
+        
+        <Footer />
       </Wrapper>
     </>
   );

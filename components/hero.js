@@ -78,7 +78,8 @@ const Hero = styled.div`
 const HeroComponent = () => (
   <Hero>
     <Space extra />
-    <div className="border">
+    <Space extra />
+    {/* <div className="border">
       <Image
         src="/images/me.jpg"
         alt="My ugly mug"
@@ -86,8 +87,7 @@ const HeroComponent = () => (
         height={88}
         priority="true"
       />
-    </div>
-    <Space standard />
+    </div> */}
     <h1>Jason Lockwood</h1>
     <h1 className="muted">Digital Product Designer</h1>
     <Space standard />
@@ -104,7 +104,7 @@ const HeroComponent = () => (
           Informed.co
         </a>
         <span className="outlink">↗</span>{" "}
-        where I designed and coded impactful user experiences, created the brand identity, and institutionalized a design system that improved consistency and results.
+        where I practiced a human-centered approach to design (and code) impactful user experiences, created the brand identity, and institutionalized a design system that improved consistency and results.
       </p>
 
       <p></p>

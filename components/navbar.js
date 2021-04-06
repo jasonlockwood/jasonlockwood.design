@@ -211,8 +211,8 @@ const Nav = () => {
           <Link href="/about">
             <a className={router.pathname == "/about" ? "active" : ""}>About</a>
           </Link>
-          <Link href="/articles">
-            <a className={router.pathname == "/articles" ? "active" : ""}>
+          <Link href="#null">
+            <a className={router.pathname == "/articles" ? "active" : "wait"}>
               Articles
             </a>
           </Link>

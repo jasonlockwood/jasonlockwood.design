@@ -45,31 +45,29 @@ const Footer = () => (
   <Wrapper>
     <Space extra />
     <flex className="pr-8">
-      <p>Let's build something together</p>
-      <h1>Get in touch</h1>
+    <a
+        href="mailto:hello@jasonlockwood.design?subject=Reaching out from your website"
+        className="link-effect"
+      >
+        hello@jasonlockwood.design
+      </a>
       <Space y8/>
     </flex>
 
     <flex>
-      <a
-        href="mailto:hello@jasonlockwood.design?subject=Reaching out from your website"
-        className="link-effect m-link"
-      >
-        hello@jasonlockwood.design
-      </a>
-
+      
       <Space y8 />
 
-      <a href="//www.twitter.com/jlockwoodtweets" className="link-effect">
+      <a href="//https://dribbble.com/jlockwood" className="link-effect">
         Dribbble
       </a><span className="outlink">↗</span>
-      <a href="//www.twitter.com/jlockwoodtweets" className="link-effect">
+      <a href="//https://github.com/jasonlockwood" className="link-effect">
         Github
       </a><span className="outlink">↗</span>
-      <a href="//www.twitter.com/jlockwoodtweets" className="link-effect">
+      <a href="//https://twitter.com/jlockwoodtweets" className="link-effect">
         Twitter
       </a><span className="outlink">↗</span>
-      <a href="//www.twitter.com/jlockwoodtweets" className="link-effect">
+      <a href="//https://www.linkedin.com/in/jasonlockwoodin/" className="link-effect">
         Linkedin
       </a><span className="outlink">↗</span>
       <Space y8/>
