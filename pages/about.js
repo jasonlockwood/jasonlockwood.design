@@ -5,7 +5,8 @@ import Link from "next/link";
 import Space from "../components/spacing";
 import TextButton from "../components/textbutton";
 import Pagination from "../components/pagination";
-import { SP } from "next/dist/next-server/lib/utils";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
 
 const Wrapper = styled.div`
   img {
@@ -18,30 +19,22 @@ export default function About() {
   return (
     <Wrapper>
       <Layout>
-        <div className="border">
-          <img
-            className="w-full sm:max-w-screen-md"
-            src="/images/About.png"
-            alt="Profile Picture"
-            priority="true"
-          />
-        </div>
-
         <Space extra />
-        <h2 className="max-w-screen-md">Hello! 👋 </h2>
+        <Space extra />
+        <h2 className="max-w-full">Hello! 👋 </h2>
         <Space standard />
-        <p className="max-w-screen-md">
+        <p className="max-w-full">
           I am a seasoned product designer with deep roots in art & graphic
           design.
         </p>
         <Space tiny />
-        <p className="max-w-screen-md">
+        <p className="max-w-full">
           With over ten years of experience in various design disciplines and
           industries, my diverse path has allowed me to become a versatile and
           well-rounded product designer.
         </p>
         <Space tiny />
-        <p className="max-w-screen-md">
+        <p className="max-w-full">
           Most recently, I worked at{" "}
           <a
             target="_blank"
@@ -52,7 +45,7 @@ export default function About() {
           </a>
           <span className="outlink">↗</span> as a Senior Product Designer. The
           Informed team was small and nimble. Being a part of a small team meant
-          taking on many responsibilities. Primarily, I practiced human-centered
+          owning many responsibilities. Primarily, I practiced human-centered
           methodology to design impactful user experiences and crafted interface
           patterns in adherence to brand principles and usability guidelines.
           But I also designed and developed the brand, institutionalized a
@@ -60,16 +53,16 @@ export default function About() {
           experiences that I was creating.
         </p>
         <Space tiny />
-        <p className="max-w-screen-md">
+        <p className="max-w-full">
           At Informed, I worked alongside incredibly talented individuals and
           learned so much from them every day. Over time, I built influence
           within the organization, which allowed me to impact product strategy
           and create team processes that improved team output. These
-          opportunities allowed me to sharpen my literacy and understanding with
-          other parts of the organization.
+          opportunities allowed me to sharpen my literacy and understanding in
+          other areas of the organization.
         </p>
         <Space tiny />
-        <p className="max-w-screen-md">
+        <p className="max-w-full">
           Outside of my design world, you'll find me adventuring with my family,
           kicking back with friends, camping, hiking, snowboarding, supporting
           Liverpool Football Club, baking sourdough bread or trying out
@@ -77,6 +70,42 @@ export default function About() {
           zone ends.
         </p>
         <Space extra />
+        <Carousel
+          showThumbs={false}
+          showStatus={false}
+          autoPlay={false}
+          infiniteLoop={true}
+          dynamicHeight={true}
+          useKeyboardArrows={true}
+          swipeable={true}
+          className="w-full"
+        >
+          <div>
+            <img
+              src="/images/Me.png"
+              alt="Profile Picture"
+              priority="true"
+            />
+            
+          </div>
+          <div>
+            <img
+              src="/images/dogsledding.png"
+              alt="Profile Picture"
+              priority="true"
+            />
+            <p className="legend">Adventuring 🇨🇦</p>
+          </div>
+          <div>
+            <img
+              src="/images/bread.png"
+              alt="Profile Picture"
+              priority="true"
+            />
+            <p className="legend">My tastiest weekly ritual</p>
+          </div>
+        </Carousel>
+        <Space extra/>
         <Space standard />
         <div className="grid grid-cols-12 gap-8 ">
           <div className="col-span-full max-w-screen-sm lg:col-span-8">
