@@ -9,24 +9,11 @@ export default function Home() {
   return (
     <Layout>
       <Hero />
-      
+
       <hr />
-      <Space extra /><div id="Work"></div>
+      <Space extra />
+      <div id="Work"></div>
       <Label>Selected work</Label>
-      <Space extra />
-
-      <Link href="/informedcobrand">
-        <a>
-          <BumpLink
-            discipline="Brand Identity, Brand Strategy, User Interface "
-            image="images/projects/brand/informed.svg"
-            title="Informed.co"
-            description="Evolving a growing startup into the most trusted price managment platform for online businesses."
-          />
-        </a>
-      </Link>
-
-      <Space extra />
       <Space extra />
 
       <Link href="/">
@@ -37,6 +24,20 @@ export default function Home() {
             href="test"
             title="Key User Actions : Dashboard"
             description="Creating easier access to high value experiences."
+          />
+        </a>
+      </Link>
+
+      <Space extra />
+      <Space extra />
+
+      <Link href="/informedcobrand">
+        <a>
+          <BumpLink
+            discipline="Brand Identity, Brand Strategy, User Interface "
+            image="images/projects/brand/informed.svg"
+            title="Informed.co"
+            description="Evolving a growing startup into the most trusted price managment platform for online businesses."
           />
         </a>
       </Link>
