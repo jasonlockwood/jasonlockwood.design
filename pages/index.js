@@ -16,7 +16,7 @@ export default function Home() {
       <Label>Selected work</Label>
       <Space extra />
 
-      <Link href="/">
+      <Link href="/keyuseractions">
         <a>
           <BumpLink
             discipline="User Research, UX/UI Design, Frontend Development"
@@ -45,7 +45,7 @@ export default function Home() {
       <Space extra />
       <Space extra />
 
-      <Link href="/">
+      <Link href="/tagging">
         <a>
           <BumpLink
             discipline="UX/UI Design, Frontend Development"
@@ -56,7 +56,7 @@ export default function Home() {
         </a>
       </Link>
 
-      {/* <Space extra />
+      <Space extra />
       <Space extra />
 
       <Link href="#null">
@@ -87,7 +87,7 @@ export default function Home() {
       <Space extra />
       <Space extra />
 
-      <hr />
+      {/* <hr />
       <Space extra />
       <Label>Articles</Label>
       <Space extra />

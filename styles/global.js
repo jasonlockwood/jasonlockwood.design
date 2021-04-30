@@ -25,7 +25,6 @@ body {
   text-decoration: none;
   text-rendering: optimizelegibility;
   appearance: none;
-  scroll-behavior: smooth;
 
   ::selection {
     background-color: ${theme.light.colors.primary};
@@ -147,6 +146,10 @@ img {
 hr{
   height:2px;
   background: ${theme.light.colors.shade_10}
+}
+
+video{ 
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 .mono{
