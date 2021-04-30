@@ -109,9 +109,8 @@ export default function Home() {
         preload="true"
         autoplay="true"
         playsinline="true"
-        muted="true"
-        loop="true"
-        controls="false"
+        muted
+        loop
         src="images/projects/keyuseractions/informed-dashboard.mp4"
       ></video>
       <Space extra />
