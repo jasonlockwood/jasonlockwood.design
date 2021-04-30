@@ -106,9 +106,8 @@ export default function Home() {
       <video
         width="2880"
         height="1800"
-        preload="auto"
+        preload="true"
         autoplay="true"
-        muted
         loop
         controls
         src="images/projects/keyuseractions/informed-dashboard.mp4"
