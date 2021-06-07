@@ -22,8 +22,8 @@ export default function Home() {
             discipline="User Research, UX/UI Design, Frontend Development"
             image="images/projects/Dashboard.svg"
             href="test"
-            title="Key User Actions : Dashboard"
-            description="Creating easier access to high value experiences."
+            title="Key Actions and Analytics"
+            description="A new dashboard experience that connects Informed.co users to the actions and analytics they value the most."
           />
         </a>
       </Link>

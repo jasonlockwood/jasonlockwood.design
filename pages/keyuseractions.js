@@ -21,21 +21,21 @@ export default function Home() {
       <Space extra />
 
       <Space extra />
-      <h1>Key User Actions : Dashboard</h1>
+      <h1>Key Actions and Analytics</h1>
 
       <Space tiny />
-      <p>Creating easier access to high value experiences.</p>
+      <p>A new dashboard experience that connects Informed.co users to the actions and analytics they value the most.</p>
 
       <Space extra />
       <div className="relative">
         <img
-          className="shadow-xl w-11/12"
+          className="shadow w-11/12"
           style={{ transition: `600ms ease-out`, transform: `translateY(-${offsetY * 0.025}px)` }}
           src="/images/projects/keyuseractions/dashboard-desktop.png"
         />
         <img
-          className="shadow-xl absolute w-3/12 -bottom-6 right-0"
-          style={{ transition: `600ms ease-out`, borderRadius: `2.25rem` ,transform: `translateY(-${offsetY * 0.125}px)` }}
+          className="drop-shadow absolute w-3/12 -bottom-6 right-0"
+          style={{ transition: `600ms ease-out`, transform: `translateY(-${offsetY * 0.125}px)` }}
           src="/images/projects/keyuseractions/dashboard-mobile.png"
         />
       </div>
@@ -103,7 +103,7 @@ export default function Home() {
       </div>
       <Space extra />
       <Space extra />
-      <video
+      <video className="shadow"
         width="2880"
         height="1800"
         preload="true"
@@ -132,64 +132,6 @@ export default function Home() {
       <Space extra />
       <Space extra />
 
-      <Space tiny />
-      <div className="grid grid-cols-2 gap-4">
-        <img src="/images/projects/brand/logo-dark.svg" />
-        <img src="/images/projects/brand/whiteboard.png" />
-      </div>
-      <Space extra />
-      <Space extra />
-      <div className="grid grid-cols-none md:grid-cols-2 gap-4">
-        <h2 className="col-span-2 md:col-span-1">the logo</h2>
-        <p>
-          The Informed logo is simple, balanced, and bold which maximizes reach
-          and recognition. The brand symbol is an upward trending bar chart
-          consisting of two bars. The symbol integrates seamlessly with the
-          wordmark but also works simply on it's own. These two bars represent
-          business growth and achievement using Informed. The wordmark is set in
-          Cera Pro Bold, a contemporary geometric sans serif. Subtle letterform
-          alterations were made to make it feel uniquely Informed.
-        </p>
-      </div>
-      <Space extra />
-      <Space extra />
-      <img src="/images/projects/brand/Sketch.png" />
-      <Space tiny />
-      <img src="/images/projects/brand/logo-light.svg" />
-      <Space tiny />
-      <div className="grid grid-cols-2 gap-4">
-        <img src="/images/projects/brand/logo-dark.svg" />
-        <img src="/images/projects/brand/logo-knockout.gif" />
-      </div>
-
-      <Space extra />
-      <Space extra />
-      <div className="grid grid-cols-2 gap-4">
-        <img src="/images/projects/brand/symbol.svg" />
-        <img src="/images/projects/brand/shirt.svg" />
-      </div>
-      <Space tiny />
-
-      <img src="/images/projects/brand/ad.svg" />
-      <Space extra />
-      <Space extra />
-
-      <p>
-        The leadership group resolved to expand the company's core offering by
-        introducing a suite of new data driven services that would both, help
-        sellers grow their business and open up new revenue streams for the
-        company.
-      </p>
-
-      <Space tiny />
-      <p>
-        To support this expansion, the business needed to shed it's old start-up
-        brand, Appeagle, for a more professional brand that would support the
-        business goals shift to a broader and more robust services.
-      </p>
-
-      <Space tiny />
-
       <Space extra />
 
       <Space extra />
@@ -197,7 +139,7 @@ export default function Home() {
       <div id="headroomContainer">
         <Headroom disableInlineStyles upTolerance={0} downTolerance={1}>
           <Pagination
-            currentProject="Key User Actions : Dashboard"
+            currentProject="Key Actions and Analytics"
             hrefBefore="/tagging"
             hrefAfter="/informedcobrand"
             beforeText=""

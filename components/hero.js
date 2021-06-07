@@ -95,7 +95,7 @@ const HeroComponent = () => (
       <p>
         Hello! I am Jason, as a product designer I exercise passion, grit, expertise and a collaborative spirit to craft meaningful experiences that delight.</p>
         <Space tiny/>
-        <p>Most recently, I worked at{" "}
+        {/* <p>Most recently, I worked at{" "}
         <a
           target="_blank"
           href="http://www.informed.co"
@@ -105,7 +105,7 @@ const HeroComponent = () => (
         </a>
         <span className="outlink">↗</span>{" "}
         where I practiced a human-centered approach to design (and code) impactful user experiences, created the brand identity, and institutionalized a design system that improved consistency and results.
-      </p>
+      </p> */}
 
       <p></p>
     </div>
