@@ -179,8 +179,8 @@ export default function Home() {
         <Headroom disableInlineStyles upTolerance={0} downTolerance={1}>
           <Pagination
             currentProject="Informed.co"
-            hrefBefore="/about"
-            hrefAfter="/"
+            hrefBefore="/designsystem"
+            hrefAfter="/keyuseractions"
             beforeText=""
             afterText=""
           />

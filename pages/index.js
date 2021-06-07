@@ -16,14 +16,14 @@ export default function Home() {
       <Label>Selected work</Label>
       <Space extra />
 
-      <Link href="/">
+      <Link href="/keyuseractions">
         <a>
           <BumpLink
             discipline="User Research, UX/UI Design, Frontend Development"
             image="images/projects/Dashboard.svg"
             href="test"
-            title="Key User Actions : Dashboard"
-            description="Creating easier access to high value experiences."
+            title="Key Actions and Analytics"
+            description="A new dashboard experience that connects Informed.co users to the actions and analytics they value the most."
           />
         </a>
       </Link>
@@ -45,7 +45,7 @@ export default function Home() {
       <Space extra />
       <Space extra />
 
-      <Link href="/">
+      <Link href="/tagging">
         <a>
           <BumpLink
             discipline="UX/UI Design, Frontend Development"
@@ -56,7 +56,7 @@ export default function Home() {
         </a>
       </Link>
 
-      {/* <Space extra />
+      <Space extra />
       <Space extra />
 
       <Link href="#null">
@@ -87,7 +87,7 @@ export default function Home() {
       <Space extra />
       <Space extra />
 
-      <hr />
+      {/* <hr />
       <Space extra />
       <Label>Articles</Label>
       <Space extra />

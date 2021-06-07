@@ -25,7 +25,6 @@ body {
   text-decoration: none;
   text-rendering: optimizelegibility;
   appearance: none;
-  scroll-behavior: smooth;
 
   ::selection {
     background-color: ${theme.light.colors.primary};
@@ -147,6 +146,15 @@ img {
 hr{
   height:2px;
   background: ${theme.light.colors.shade_10}
+}
+
+.shadow{ 
+  box-shadow: 0 52px 74px rgb(0 21 64 / 14%);
+}
+
+.drop-shadow{
+  -webkit-filter: drop-shadow(0 52px 74px rgb(0 21 64 / 14%));
+  filter: drop-shadow(0 52px 74px rgb(0 21 64 / 14%)); 
 }
 
 .mono{
