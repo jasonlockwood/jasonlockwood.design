@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { theme } from "../styles/theme";
 
 const TextButton = styled.button`
-  margin: ${theme.space[3]} ${theme.space[0]};
+  margin: ${theme.space[4]} ${theme.space[0]};
   display: flex;
   color: ${theme.light.colors.shade_80};
   font-size: ${theme.fontSizes[2]};
@@ -24,7 +24,7 @@ const TextButton = styled.button`
     top: 4px;
     margin-left:8px;
     color: ${theme.light.colors.primary};
-    font-size: ${theme.fontSizes[3]};
+    font-size: ${theme.fontSizes[5]};
     line-height: 1rem;
     padding-right: 8px;
   }
@@ -42,7 +42,7 @@ const TextButton = styled.button`
     top: 4px;
     margin-right:8px;
     color: ${theme.light.colors.primary};
-    font-size: ${theme.fontSizes[3]};
+    font-size: ${theme.fontSizes[5]};
     line-height: 1rem;
     padding-left: 8px;
   }
