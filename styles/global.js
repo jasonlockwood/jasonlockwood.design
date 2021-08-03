@@ -7,11 +7,12 @@ const GlobalStyle = createGlobalStyle`
 
 html,
 body {
-  font-family: "Gelica-SemiBold", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+  font-family: "Gelica-Bold", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: ${theme.lineHeights.body};
   width: 100%;
   height: 100%;
+  background: #F2F2F2;
   
 }
 
@@ -25,6 +26,8 @@ body {
   text-decoration: none;
   text-rendering: optimizelegibility;
   appearance: none;
+  
+
 
   ::selection {
     background-color: ${theme.light.colors.primary};
@@ -62,7 +65,7 @@ p, li{
 }
 
 h1 {
-    font-size: ${theme.fontSizes[4]};
+    font-size: ${theme.fontSizes[6]};
 
     @media ${theme.breakpoint.sm}{
       font-size: ${theme.fontSizes[6]};
@@ -78,7 +81,7 @@ h1 {
 }
 
 h2 {
-    font-size: ${theme.fontSizes[3]};
+    font-size: ${theme.fontSizes[4]};
 
     @media ${theme.breakpoint.sm}{
       font-size: ${theme.fontSizes[5]};

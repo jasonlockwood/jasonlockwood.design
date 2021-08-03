@@ -21,17 +21,12 @@ export default function About() {
       <Layout>
         <Space extra />
         <Space extra />
-        <h2 className="max-w-full">Hello! 👋 </h2>
+        <h2 className="max-w-full">👋 </h2>
+        <Space tiny/> 
+        <h2 className="max-w-full">I'm Jason, a Product Designer who builds simple product experiences that delight.</h2>
         <Space standard />
         <p className="max-w-full">
-          I am a seasoned product designer with deep roots in art & graphic
-          design.
-        </p>
-        <Space tiny />
-        <p className="max-w-full">
-          With over ten years of experience in various design disciplines and
-          industries, my diverse path has allowed me to become a versatile and
-          well-rounded product designer.
+        I’ve spent the past 10+ years working across different areas of design; email design, marketing websites, brand design, frontend development, to designing UI/UX for digital products.
         </p>
         <Space tiny />
         <p className="max-w-full">
@@ -43,14 +38,11 @@ export default function About() {
           >
             Informed.co
           </a>
-          <span className="outlink">↗</span> as a Senior Product Designer. The
-          Informed team was small and nimble. Being a part of a small team meant
-          owning many responsibilities. Primarily, I practiced human-centered
-          methodology to design impactful user experiences and crafted interface
-          patterns in adherence to brand principles and usability guidelines.
-          But I also designed and developed the brand, institutionalized a
-          design system, and led design team operations, all while coding the
-          experiences that I was creating.
+          <span className="outlink">↗</span> as a Senior Product Designer. At Informed, I practiced user-centered design methodology to create impactful user experiences to increase customer success, and percieved value. 
+          
+          Part of that meant creating and defining visual interface and interaction patterns in adherence to brand principles and usability guidelines.
+          <Space tiny />
+          However, I also actively contributed to brand design,  institutionalized a design system, and took agency of design team operations, all while coding the experiences that I was creating.
         </p>
         <Space tiny />
         <p className="max-w-full">

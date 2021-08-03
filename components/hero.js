@@ -20,15 +20,16 @@ const Hero = styled.div`
     display: inline-flex;
   }
 
-  img {
-    border-radius: 100%;
-  }
 
   .border {
-    border-radius: 100%;
-    border: 2px solid ${theme.light.colors.shade_90};
     display: inline-flex;
     position: relative;
+  
+    img{
+      border: 2px solid ${theme.light.colors.shade_90} !important;
+      border-radius: 100%;
+      z-index: 1;
+    }
 
     &:before,
     &:after {
@@ -37,38 +38,36 @@ const Hero = styled.div`
       transition: transform 0.2s ease-in-out;
     }
 
-    &:before {
-      height: 92px;
-      width: 92px;
+    &:after {
+      height: 100px;
+      width: 100px;
       background: ${theme.light.colors.primary};
       border: 2px solid ${theme.light.colors.shade_90};
       border-radius: 100%;
-      left: 6px;
-      top: -2px;
+      left: 8px;
       position: absolute;
-      z-index: -1;
+      z-index: 0;
       transform: translateX(0);
     }
 
-    &:after {
-      height: 92px;
-      width: 92px;
+    &:before {
+      height: 100px;
+      width: 100px;
       background: ${theme.light.colors.shade_10};
       border: 2px solid ${theme.light.colors.shade_90};
       border-radius: 100%;
-      left: 14px;
-      top: -2px;
+      left: 16px;
       position: absolute;
-      z-index: -2;
+      z-index: 0;
       transform: translateX(0);
     }
 
-    &:hover:before {
+    &:hover:after {
       transform: translateX(8px);
       background: ${theme.light.colors.primary_hover};
     }
 
-    &:hover:after {
+    &:hover:before {
       transform: translateX(16px);
       background: ${theme.light.colors.background};
     }
@@ -79,23 +78,31 @@ const HeroComponent = () => (
   <Hero>
     <Space extra />
     <Space extra />
-    {/* <div className="border">
+    <div className="border">
       <Image
         src="/images/me.jpg"
         alt="My ugly mug"
-        width={88}
-        height={88}
+        width={96}
+        height={96}
         priority="true"
+        placeholder="blur"
       />
-    </div> */}
+    </div>
+    <Space standard/>
     <h1>Jason Lockwood</h1>
     <h1 className="muted">Digital Product Designer</h1>
     <Space standard />
     <div>
       <p>
-        Hello! I am Jason, as a product designer I exercise passion, grit, expertise and a collaborative spirit to craft meaningful experiences that delight.</p>
+        <strong>Hello!</strong> I’m Jason Lockwood, a seasoned product designer with coding chops
+        and a mindset for growth. I apply expertise and excellence in my craft
+        to identify, understand and solve complex user problems with simple
+        solutions that delight. I have extensive experience shaping product
+        strategy, forging processes, and building tools that help teams and
+        organizations succeed. 
         <Space tiny/>
-        {/* <p>Most recently, I worked at{" "}
+        
+        Most recently, I worked at{" "}
         <a
           target="_blank"
           href="http://www.informed.co"
@@ -104,16 +111,19 @@ const HeroComponent = () => (
           Informed.co
         </a>
         <span className="outlink">↗</span>{" "}
-        where I practiced a human-centered approach to design (and code) impactful user experiences, created the brand identity, and institutionalized a design system that improved consistency and results.
-      </p> */}
+        where I practiced a human-centered design approach to create <i>(and code)</i> impactful user experiences. As well as building influence within the organization in order to develope the design team's agency and efficacy.
 
-      <p></p>
+
+        {/* I exercised agency over design strategy in order to develope the effectiveness of the Informed product experiences. This meant identifying gaps and building levers within the organization to improve the design team's efficacy. */}
+      </p>
     </div>
 
     <Space standard />
     <Link href="/about">
       <a>
-        <Button primary className="mb-4 sm:mb-0">Find out more</Button>
+        <Button primary className="mb-4 sm:mb-0">
+          Find out more
+        </Button>
       </a>
     </Link>
 
@@ -127,10 +137,10 @@ const HeroComponent = () => (
       href="/about"
       after="after"
       buttonText="Learn more about me"/> */}
-    
+
     <Space extra />
     <Space extra />
-  </Hero>
+    </Hero>
 );
 
 export default HeroComponent;

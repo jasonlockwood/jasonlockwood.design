@@ -5,7 +5,20 @@
   }
 
   @font-face {
+     font-family: "Gelica-Bold";
+     src: url('Gelica-Bold.woff2') format('woff2'), 
+          url('Gelica-Bold.woff') format('woff');
+   }
+
+  @font-face {
     font-family: "iA Writer Quattro S";
     src: url('iAWriterQuattroS-Regular.woff') format('woff'), 
          url('iAWriterQuattroS-Regular.woff2') format('woff2');
+         font-weight: normal;
   }
+
+  @font-face {
+     font-family: "iA Writer Quattro S";
+     src: url('iAWriterQuattroS-Bold.woff') format('woff');
+     font-weight:700;
+   }
