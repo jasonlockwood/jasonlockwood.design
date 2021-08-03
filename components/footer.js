@@ -43,7 +43,7 @@ const flex = styled.div`
 
 const Footer = () => (
   <Wrapper>
-    <Space extra />
+    <Space />
     <flex className="pr-8">
     <a
         href="mailto:hello@jasonlockwood.design?subject=Reaching out from your website"
@@ -72,7 +72,7 @@ const Footer = () => (
       </a><span className="outlink">↗</span>
       <Space y8/>
     </flex>
-    <Space extra/>
+    <Space/>
   </Wrapper>
 );
 

@@ -21,7 +21,7 @@ export default function Layout({ children }) {
   return (
     <>
       <Wrapper>
-        <Navbar />
+        {/* <Navbar /> */}
 
         <Main className="px-4 lg:px-0">{children}</Main>
 

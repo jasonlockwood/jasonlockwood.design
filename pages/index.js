@@ -10,7 +10,7 @@ export default function Home() {
     <Layout>
       <Hero />
 
-      <hr />
+      {/* <hr />
       <Space extra />
       <div id="Work"></div>
       <Label>Selected work</Label>
@@ -82,49 +82,11 @@ export default function Home() {
             description="How I helped Appeagle; a growing startup company, transform into Informed.co. The most trusted and essential product for third party businesses on Amazon. "
           />
         </a>
-      </Link>
-
-      <Space extra />
-      <Space extra />
-
-      {/* <hr />
-      <Space extra />
-      <Label>Articles</Label>
-      <Space extra />
-
-      <Link href="/">
-        <a>
-          <BumpLink
-            title="Design System"
-            description="How I helped Appeagle; a growing startup company, transform into Informed.co. The most trusted and essential product for third party businesses on Amazon. "
-          />
-        </a>
-      </Link>
-
-      <Space extra />
-
-      <Link href="/">
-        <a>
-          <BumpLink
-            title="The Next.js & Vercel Experience"
-            description="How I helped Appeagle; a growing startup company, transform into Informed.co. The most trusted and essential product for third party businesses on Amazon. "
-          />
-        </a>
-      </Link>
-
-      <Space extra />
-
-      <Link href="/">
-        <a>
-          <BumpLink
-            title="Keeping it simple"
-            description="How I helped Appeagle; a growing startup company, transform into Informed.co. The most trusted and essential product for third party businesses on Amazon. "
-          />
-        </a>
       </Link> */}
 
       <Space extra />
-      <Space extra />
+      <Space extra/>
+      
     </Layout>
   );
 }

@@ -8,6 +8,7 @@ const Button = styled.button`
   font-family: "IA Writer Quattro S";
   font-size: ${theme.fontSizes[1]};
   font-weight: ${theme.fontWeights.bold};
+  border: 2px solid ${theme.light.colors.shade_80};
   ${(props) =>
     props.primary &&
     `
@@ -18,7 +19,6 @@ const Button = styled.button`
     props.secondary &&
     `
     background-color: ${props.theme.light.colors.shade_10};
-    border: 1px solid ${props.theme.light.colors.shade_10};
   `}
   border-radius: ${theme.borderRadius.standard};
   cursor: pointer;
