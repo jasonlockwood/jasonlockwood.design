@@ -110,8 +110,8 @@ const HeroComponent = () => (
         >
           Informed.co
         </a>
-        <span className="outlink">↗</span>{" "}
-        where I practiced a human-centered design approach to create <i>(and code)</i> impactful user experiences. As well as building influence within the organization in order to develope the design team's agency and efficacy.
+        <span className="outlink">↗</span>,{" "}
+        where I practiced a human-centered design approach to create <i>(and code)</i> impactful user experiences. I also built influence within the organization in order to develop the design team's agency and efficacy.
 
 
         {/* I exercised agency over design strategy in order to develope the effectiveness of the Informed product experiences. This meant identifying gaps and building levers within the organization to improve the design team's efficacy. */}
