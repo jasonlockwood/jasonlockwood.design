@@ -188,7 +188,7 @@ export default function About() {
               <h2>Education</h2>
               <Space tiny />
               <p>New York Institute of Technology</p>
-              <p className="mono">2018 - 2020</p>
+              <p className="mono">2008 - 2010</p>
               <p>BFA - Graphic Design</p>
               <Space standard />
             </div>
