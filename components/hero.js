@@ -94,21 +94,20 @@ const HeroComponent = () => (
     <Space standard />
     <div>
       <p>
-        <strong>Hello!</strong> I am Jason, a seasoned product designer with coding chops and a mindset for growth. I apply expertise and excellence in my craft to identify, understand and solve complex user problems with bold and intuitive design solutions that delight.
-
-        <Space tiny/>
-        
-        Currently, I am building experiences at{" "}
+        <strong>Hello!</strong> I am Jason Lockwood, a seasoned product designer at {" "}
         <a
           target="_blank"
           href="http://www.madhive.com"
           className="link-effect"
         >
           MadHive
+          <span className="outlink">↗</span>
         </a>
-        <span className="outlink">↗</span>,{" "}
-        to help define gold standards and drive innovation in AdTech.
+        , working on building campaign experiences and driving innovation in AdTech.
 
+        <Space tiny/>
+
+       I apply expertise and excellence in my craft to identify, understand and solve complex user problems with bold and intuitive design solutions that delight.
 
         {/* I exercised agency over design strategy in order to develope the effectiveness of the Informed product experiences. This meant identifying gaps and building levers within the organization to improve the design team's efficacy. */}
       </p>
