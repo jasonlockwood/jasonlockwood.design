@@ -8,19 +8,20 @@
     "start": "next start"
   },
   "dependencies": {
-    "autoprefixer": "^10.2.4",
     "framer-motion": "^2.9.4",
-    "next": "^10.0.5",
-    "postcss": "^8.2.6",
-    "react": "16.14.0",
-    "react-dom": "16.14.0",
+    "next": "^10.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-headroom": "^3.1.0",
     "react-responsive-carousel": "^3.2.16",
     "sass": "^1.27.0",
-    "styled-components": "^5.2.0",
-    "tailwindcss": "^2.0.3"
+    "sharp": "^0.26.3",
+    "styled-components": "^5.2.0"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "latest"
+    "autoprefixer": "^10.4.2",
+    "babel-plugin-styled-components": "latest",
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.0.15"
   }
 }
