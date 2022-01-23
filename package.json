@@ -10,7 +10,7 @@
   "dependencies": {
     "framer-motion": "^2.9.4",
     "libvips": "^0.0.2",
-    "next": "^10.0.1",
+    "next": "^12.0.8",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-headroom": "^3.1.0",
