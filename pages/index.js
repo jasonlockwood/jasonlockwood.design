@@ -1,9 +1,7 @@
 import Layout, { siteTitle } from "../components/layout";
 import Space from "../components/spacing";
 import Hero from "../components/hero";
-import Label from "../components/label";
-import BumpLink from "../components/bumplink";
-import Link from "next/link";
+
 
 export default function Home() {
   return (
