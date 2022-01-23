@@ -58,16 +58,16 @@ const Footer = () => (
       
       <Space y8 />
 
-      <a href="//https://dribbble.com/jlockwood" className="link-effect">
+      <a href="//www.dribbble.com/jlockwood" className="link-effect">
         Dribbble
       </a><span className="outlink">↗</span>
-      <a href="//https://github.com/jasonlockwood" className="link-effect">
+      <a href="//www.github.com/jasonlockwood" className="link-effect">
         Github
       </a><span className="outlink">↗</span>
-      <a href="//https://twitter.com/jlockwoodtweets" className="link-effect">
+      <a href="//www.twitter.com/jlockwoodtweets" className="link-effect">
         Twitter
       </a><span className="outlink">↗</span>
-      <a href="//https://www.linkedin.com/in/jasonlockwoodin/" className="link-effect">
+      <a href="//www.linkedin.com/in/jasonlockwoodin/" className="link-effect">
         Linkedin
       </a><span className="outlink">↗</span>
       <Space y8/>

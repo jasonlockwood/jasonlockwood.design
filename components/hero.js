@@ -94,24 +94,20 @@ const HeroComponent = () => (
     <Space standard />
     <div>
       <p>
-        <strong>Hello!</strong> I’m Jason Lockwood, a seasoned product designer with coding chops
-        and a mindset for growth. I apply expertise and excellence in my craft
-        to identify, understand and solve complex user problems with simple
-        solutions that delight. I have extensive experience shaping product
-        strategy, forging processes, and building tools that help teams and
-        organizations succeed. 
+        <strong>Hello!</strong> I am Jason, a seasoned product designer with coding chops and a mindset for growth. I apply expertise and excellence in my craft to identify, understand and solve complex user problems with bold and intuitive design solutions that delight.
+
         <Space tiny/>
         
-        Most recently, I worked at{" "}
+        Currently, I am building experiences at{" "}
         <a
           target="_blank"
-          href="http://www.informed.co"
+          href="http://www.madhive.com"
           className="link-effect"
         >
-          Informed.co
+          MadHive
         </a>
         <span className="outlink">↗</span>,{" "}
-        where I practiced a human-centered design approach to create <i>(and code)</i> impactful user experiences. I also built influence within the organization in order to develop the design team's agency and efficacy.
+        to help define gold standards and drive innovation in AdTech.
 
 
         {/* I exercised agency over design strategy in order to develope the effectiveness of the Informed product experiences. This meant identifying gaps and building levers within the organization to improve the design team's efficacy. */}
