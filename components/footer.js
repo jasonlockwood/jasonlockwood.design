@@ -58,9 +58,6 @@ const Footer = () => (
       
       <Space y8 />
 
-      <a href="//www.dribbble.com/jlockwood" className="link-effect">
-        Dribbble
-      </a><span className="outlink">↗</span>
       <a href="//www.github.com/jasonlockwood" className="link-effect">
         Github
       </a><span className="outlink">↗</span>
