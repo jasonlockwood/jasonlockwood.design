@@ -42,7 +42,7 @@ const flex = styled.div`
 `;
 
 const Footer = () => (
-  <Wrapper>
+  <Wrapper className="px-4 lg:px-0">
     <Space />
     <flex className="pr-8">
     <a
