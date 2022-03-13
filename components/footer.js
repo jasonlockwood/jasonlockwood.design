@@ -15,7 +15,6 @@ const Wrapper = styled.footer`
   a {
     color: ${theme.light.colors.shade_60};
     overflow: hidden;
-    font-family: --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 500;
 
     &:hover{
@@ -29,10 +28,6 @@ const Wrapper = styled.footer`
     margin-right: ${theme.space[2]};
 
   }
-
-  .m-link{
-      font-size: ${theme.fontSizes[2]};
-    }
 `;
 
 const flex = styled.div`
@@ -43,21 +38,12 @@ const flex = styled.div`
 
 const Footer = () => (
   <Wrapper className="px-4 lg:px-0">
-    <Space />
-    <flex className="pr-8">
-    <a
-        href="mailto:hello@jasonlockwood.design?subject=Reaching out from your website"
-        className="link-effect"
-      >
-        hello@jasonlockwood.design
-      </a>
-      <Space y8/>
-    </flex>
 
     <flex>
-      
-      <Space y8 />
 
+      <a href="mailto:hello@jasonlockwood.design?subject=Reaching out from your website" className="link-effect">
+        Email
+      </a><span className="outlink">↗</span>
       <a href="//www.github.com/jasonlockwood" className="link-effect">
         Github
       </a><span className="outlink">↗</span>
@@ -67,9 +53,9 @@ const Footer = () => (
       <a href="//www.linkedin.com/in/jasonlockwoodin/" className="link-effect">
         Linkedin
       </a><span className="outlink">↗</span>
-      <Space y8/>
+
     </flex>
-    <Space/>
+
   </Wrapper>
 );
 
