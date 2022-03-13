@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
 
 html,
 body {
-  font-family: "Gelica-Bold", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+  font-family: 'iA Writer Quattro S', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: ${theme.lineHeights.body};
   width: 100%;
@@ -52,6 +52,8 @@ h1, h2, h3, h4 ,h5{
     line-height: ${theme.lineHeights.heading};
     color: ${theme.light.colors.shade_80};
     display: flex;
+    font-family: "Gelica-Bold", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 p, li{
