@@ -84,7 +84,6 @@ const HeroComponent = () => (
         width={96}
         height={96}
         priority="true"
-        placeholder="blur"
       />
     </div>
     <Space standard/>
