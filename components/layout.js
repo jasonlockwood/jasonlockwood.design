@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { theme } from "../styles/theme";
-import Navbar from "./navbar";
+// import Navbar from "./navbar";
 import Footer from "./footer";
 
 const Wrapper = styled.div`

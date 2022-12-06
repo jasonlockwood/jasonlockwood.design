@@ -1,15 +1,16 @@
 import Layout, { siteTitle } from "../components/layout";
 import Space from "../components/spacing";
 import Hero from "../components/hero";
-
+// import Label from "../components/label";
+// import Link from "next/link";
+// import BumpLink from "../components/bumplink"
 
 export default function Home() {
   return (
     <Layout>
       <Hero />
 
-      {/* <hr />
-      <Space extra />
+      {/* <Space extra />
       <div id="Work"></div>
       <Label>Selected work</Label>
       <Space extra />
