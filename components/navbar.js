@@ -203,13 +203,13 @@ const Nav = () => {
 
         <motion.div className={`page-links ${isActive ? "" : "is-active"}`}>
         <Link href="/">
-            <a className={router.pathname == "/" ? "active" : ""}>Home</a>
+            className={router.pathname == "/" ? "active" : ""}Home
           </Link>
           <Link href="/#Work">
-            <a className={router.pathname == "/#Work" ? "active" : ""}>Work</a>
+            className={router.pathname == "/#Work" ? "active" : ""}Work
           </Link>
           <Link href="/about">
-            <a className={router.pathname == "/about" ? "active" : ""}>About</a>
+            className={router.pathname == "/about" ? "active" : ""}About
           </Link>
           <Link href="#null">
             <a className={router.pathname == "/articles" ? "active" : "wait"}>

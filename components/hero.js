@@ -103,30 +103,26 @@ const HeroComponent = () => (
         </a>
         <span className="outlink">↗</span>,{" "}
         working on building industry-leading programmatic advertising experiences and driving innovation in AdTech.
-        <Space tiny/>
+        
         I apply expertise and excellence in my craft
         to identify, understand and solve complex problems with simple
         solutions that delight. I have extensive experience shaping product
         strategy, forging processes, and building tools that help teams and
         organizations succeed.
-        <Space tiny/>
+        
 
       </p>
     </div>
 
     <Space standard />
     <Link href="/about">
-      <a>
         <Button primary className="mb-4 sm:mb-0">
           Find out more
         </Button>
-      </a>
     </Link>
 
     <Link href="mailto:hello@jasonlockwood.design?subject=Reaching out from your website">
-      <a>
         <Button secondary>Get in touch</Button>
-      </a>
     </Link>
 
     {/* <TextButton 
