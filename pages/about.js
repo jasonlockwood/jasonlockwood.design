@@ -2,7 +2,6 @@ import Layout, { siteTitle } from "../components/layout";
 import styled from "styled-components";
 import { theme } from "../styles/theme";
 import Space from "../components/spacing";
-import TextButton from "../components/textbutton"; 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 
