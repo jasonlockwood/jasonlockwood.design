@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Button from "./button";
 import Space from "./spacing";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { theme } from "../styles/theme";
 
 const Hero = styled.div`

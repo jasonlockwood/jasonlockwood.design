@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@vercel/analytics": "^0.1.5",
     "autoprefixer": "^10.2.4",
     "eslint-config-next": "^13.0.6",
     "framer-motion": "^2.9.4",
