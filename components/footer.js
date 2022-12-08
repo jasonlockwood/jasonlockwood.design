@@ -30,16 +30,16 @@ const Wrapper = styled.footer`
   }
 `;
 
-const flex = styled.div`
-  display: flex;
-  flex-direction: column;
+// const Flex = styled.div`
+//   display: flex;
+//   flex-direction: column;
 
-`;
+// `;
 
 const Footer = () => (
-  <Wrapper className="px-4 lg:px-0">
+  <Wrapper className="px-4 lg:px-0 flex-auto">
 
-    <flex>
+    <div>
 
       <a href="mailto:hello@jasonlockwood.design?subject=Reaching out from your website" className="link-effect">
         Email
@@ -54,7 +54,7 @@ const Footer = () => (
         Linkedin
       </a><span className="outlink">↗</span>
 
-    </flex>
+    </div>
 
   </Wrapper>
 );

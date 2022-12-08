@@ -1,10 +1,7 @@
 import Layout, { siteTitle } from "../components/layout";
 import styled from "styled-components";
 import { theme } from "../styles/theme";
-import Link from "next/link";
 import Space from "../components/spacing";
-import TextButton from "../components/textbutton";
-import Pagination from "../components/pagination";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 
@@ -34,14 +31,15 @@ export default function About() {
           <a
             target="_blank"
             href="http://www.informed.co"
-            className="link-effect"
-          >
+            className="link-effect">
             Informed.co
+
           </a>
           <span className="outlink">↗</span> as a Senior Product Designer. At Informed, I practiced user-centered design methodology to create impactful user experiences to increase customer success, and percieved value. 
           
-          Part of that meant creating and defining visual interface and interaction patterns in adherence to brand principles and usability guidelines.
+          Part of that meant creating and defining visual interface and interaction patterns in adherence to brand principles and usability guidelines.</p>
           <Space tiny />
+          <p>
           However, I also actively contributed to brand design,  institutionalized a design system, and took agency of design team operations, all while coding the experiences that I was creating.
         </p>
         <Space tiny />
@@ -193,7 +191,7 @@ export default function About() {
               <Space standard />
             </div>
 
-            <div clasName="col-span-6 md:col-span-4">
+            <div className="col-span-6 md:col-span-4">
               <h2>Skills</h2>
               <Space tiny />
               <ul>
@@ -213,12 +211,6 @@ export default function About() {
 
         <Space extra />
 
-        {/* <Space standard />
-        <div className="flex justify-between">
-          <TextButton before slug="/about" buttonText="Octopus's Garden" />
-          <TextButton after slug="/about" buttonText="Golden Slumbers" />
-        </div>
-        <Space standard /> */}
       </Layout>
     </Wrapper>
   );
