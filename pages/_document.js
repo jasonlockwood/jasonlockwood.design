@@ -114,9 +114,9 @@ export default function Document () {
           sizes="16x16"
           href="/favicon-16x16.png"
         />
-        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-TileColor" content="#F2F2F2" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-        <meta name="theme-color" content="#ffffff"></meta>
+        <meta name="theme-color" content="#F2F2F2"/>
         <meta
           name="Jason Lockwood - Senior Product Designer UI UX"
           content="Learn how to build a personal website using Next.js"
