@@ -6,6 +6,7 @@ import Image from "next/legacy/image";
 import { theme } from "../styles/theme";
 
 const Hero = styled.div`
+
   h1 {
     color: ${theme.light.colors.shade_90};
   }
@@ -92,8 +93,10 @@ const HeroComponent = () => (
     <Space standard />
     <div>
       <p>
-        <strong>Hello!</strong> I am Jason Lockwood, a seasoned product designer at 
-        {" "}
+        <strong>Hello!</strong> I'm Jason, a seasoned designer specializing in UI/UX design, user research, product development & strategy, and design systems.</p>
+        
+        <Space tiny/>
+        <p>Currently, I work at {" "}
         <a
           target="_blank"
           href="//www.madhive.com"
@@ -101,17 +104,12 @@ const HeroComponent = () => (
         >
           MadHive
         </a>
-        <span className="outlink">↗</span>,{" "}
-        working on building industry-leading programmatic advertising experiences and driving innovation in AdTech.
-        
-        I apply expertise and excellence in my craft
-        to identify, understand and solve complex problems with simple
-        solutions that delight. I have extensive experience shaping product
-        strategy, forging processes, and building tools that help teams and
-        organizations succeed.
-        
-
+        <span className="outlink">↗</span> {" "}
+        where I help build industry-leading programmatic advertising experiences for OTT advertisers. 
       </p>
+      <Space tiny/>
+      <p>If you’d like to connect or request work samples feel free to reach out.</p>
+
     </div>
 
     <Space standard />
@@ -124,11 +122,6 @@ const HeroComponent = () => (
     <Link href="mailto:hello@jasonlockwood.design?subject=Reaching out from your website">
         <Button secondary>Get in touch</Button>
     </Link>
-
-    {/* <TextButton 
-      href="/about"
-      after="after"
-      buttonText="Learn more about me"/> */}
 
     <Space extra />
     <Space extra />

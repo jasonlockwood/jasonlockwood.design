@@ -69,7 +69,7 @@ const TextButton = styled.button`
 `;
 
 const TextButtonComponent = ({href, before, after, buttonText }) => (
-  <Link passhref href={href}><a><TextButton before={before} after={after}>{buttonText}</TextButton></a></Link>
+  <Link passhref href={href}><TextButton before={before} after={after}>{buttonText}</TextButton></Link>
   
 
 );
